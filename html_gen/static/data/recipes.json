@@ -1,0 +1,276 @@
+{
+  "recipes": [
+    {
+      "id": 0,
+      "name": "Tomato and Eggs",
+      "origin": "China",
+      "source": {
+        "value": "Own Recipe",
+        "type": "text"
+      },
+      "category": "Main Dish",
+      "main_img": {
+        "src": "images/recipes/tomato-and-eggs-1.jpeg",
+        "alt": "Tomato and Eggs with chives in a plate."
+      },
+      "description": "Tomato and eggs is a hot dish which originated from China. It is a simple and fast dish to make, but it has good nutritional value. It is a very satisfying food to eat and popularly served with rice and topped with green onions.",
+      "ingredients": [
+        "Tomatoes",
+        "Eggs",
+        "Salt",
+        "Sugar",
+        "Cooking Oil"
+      ],
+      "steps": [
+        "Crack eggs into a bowl and mix until scrambled.",
+        "Cut tomatoes into pieces around the size of your thumb.",
+        "Oil a hot pan and cook the eggs until satisfied then remove the eggs.",
+        "Re-oil the pan and cook the tomatoes until they loosen.",
+        "Combine eggs and tomatoes and season with salt and sugar."
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/recipes/tomato-and-eggs-2.jpeg",
+          "alt": "Tomato and eggs with rice."
+        },
+        {
+          "src": "images/recipes/tomato-and-eggs--tomatoes-cooking.webp",
+          "alt": "Tomatoes cooking in a pan."
+        },
+        {
+          "src": "images/recipes/tomato-and-eggs--scrambled-eggs.jpeg",
+          "alt": "Scrambled eggs cooking in a pan."
+        }
+      ],
+      "author": "Alex Ni"
+    },
+    {
+      "id": 1,
+      "name": "Twice Baked Potato",
+      "origin": "South America",
+      "source": {
+        "value": "https://www.allrecipes.com/recipe/24332/ultimate-twice-baked-potatoes/",
+        "type": "link"
+      },
+      "category": "Main Dish, Comfort Food",
+      "main_img": {
+        "src": "images/recipes/baked-potato.jpeg",
+        "alt": "Backed potato with cheese and bacon bits."
+      },
+      "description": "These twice-baked potatoes work perfectly as a simple, crowd-pleasing entrée or as a rich side dish. It is believed that baked potatoes originate from South America, or more specifically, Peru. The Inca Indians in Peru were said to be the first to originally cultivate potatoes and when the Spanish conquistadors conquered Peru, they brought the potato to Europe.",
+      "ingredients": [
+        "4 large baking potatoes",
+        "8 slices bacon",
+        "1 cup sour cream",
+        "½ cup milk",
+        "4 tablespoons butter",
+        "½ teaspoon salt",
+        "½ teaspoon pepper",
+        "1 cup shredded Cheddar cheese, divided",
+        "8 green onions, sliced, divided"
+      ],
+      "steps": [
+        "Gather ingredients and preheat the oven to 350 degrees F (175 degrees C).",
+        "Bake potatoes in the preheated oven until tender, about 1 hour, depending on the size of your potatoes. Set potatoes aside until cool enough to handle.",
+        "Meanwhile, place bacon in a large, deep skillet. Cook over medium-high heat until evenly brown. Drain, crumble, and set aside.",
+        "Slice potatoes in half lengthwise and scoop the flesh into a large bowl; save skins.",
+        "Add sour cream, milk, butter, salt, pepper, 1/2 cup cheese, and 1/2 of the green onions to the potato; mix with a hand mixer until well blended and creamy.",
+        "Spoon the mixture into the potato skins; top each with remaining cheese, green onions, and bacon.",
+        "Return potatoes to the preheated oven and continue baking until the cheese is melted, about 15 minutes. Serve Hot!"
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/recipes/baked-potato-ingredients.jpg",
+          "alt": "Ingredients for baked potato."
+        },
+        {
+          "src": "images/recipes/baked-potato--potatoes-scooped.jpg",
+          "alt": "Potatoes scooped out into a bowl."
+        },
+        {
+          "src": "images/recipes/baked-potato-mixture.jpg",
+          "alt": "Potato and other ingredients mixed in a bowl."
+        }
+      ],
+      "author": "Sanjida Eva"
+    },
+    {
+      "id": 2,
+      "name": "Dead Simple Fried Rice",
+      "origin": "American/East Asian",
+      "source": {
+        "value": "Self",
+        "type": "text"
+      },
+      "category": "Main Dish",
+      "main_img": {
+        "src": "images/recipes/dead-simple-fried-rice-primary.jpg",
+        "alt": "Fried rice in a pan."
+      },
+      "description": "This Dead Simple Fried Rice recipe is an incredibly modular and tasty dish. At its core, it's just rice, vegetables, protein, and oil. As such, the dish can be modified to serve as many or as few people as needed with a wide variety of food preferences. Experimentation with what specific ingredients you enjoy the most will unlock the full potential of this dish.",
+      "ingredients": [
+        "Long-grain white rice",
+        "Frozen Vegetables",
+        "Eggs",
+        "(optional) Milk",
+        "Oil of Choice",
+        "Salt",
+        "Soy Sauce",
+        "(optional) Additional Sauce: Curry Sauce/Paste, Spicy Teriyaki Sauce, and Sweet Chili Sauce are great options",
+        "(optional) Additional Pre-cooked/Fast-cooking Protein of Choice: Nuts, sausage, tofu, and bacon are great options",
+        "(optional) Additional Fresh Vegetables: Green onions, celery, and vidalia onions add great texture and flavor to the dish."
+      ],
+      "steps": [
+        "In a rice cooker, add half a cup of rice, a cup of water, a touch of oil, and a pinch of salt. Cook the rice. Tip: if there are tough frozen veggies, such as broccoli, you might want to add the frozen veggies to the integrated steamer basket.",
+        "On high medium heat on your stovetop, in a frying pan, add your chosen oil. Add some milk if desired. Then, scramble the eggs.",
+        "Before the eggs are fully done, add the frozen vegetables. Add fresh vegetables when required so they are fully cooked by the end.",
+        "(Optional) Add the additional protein when required so they are fully cooked by the end.",
+        "Once the rice is done, add it to the pan. Poor your desired amount of Soy Sauce. Stir well.",
+        "(Optional) After that, add your desired amount of additional sauce. Stir well.",
+        "Let the fried rice cook until it is no longer visibly oily and the dish is nice and hot, with the vegetables fully cooked.",
+        "Plate the fried rice. Enjoy!"
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/recipes/dead-simple-fried-rice-1.jpg",
+          "alt": "Fried rice in glass tupperware."
+        },
+        {
+          "src": "images/recipes/dead-simple-fried-rice-2.jpg",
+          "alt": "Dead Simple Fried Rice variant using noodles in a pan."
+        },
+        {
+          "src": "images/recipes/dead-simple-fried-rice-3.jpg",
+          "alt": "Dead Simple Fried Rice in a frying pan. Large broccoli florets are visible as well as hot dogs and other vegetables."
+        }
+      ],
+      "author": "Tristan Goodell"
+    },
+    {
+      "id": 3,
+      "name": "Dutch Baby Pancake",
+      "origin": "Germany",
+      "source": {
+        "value": "Own Recipe",
+        "type": "text"
+      },
+      "category": "Breakfast, Main Dish",
+      "main_img": {
+        "src": "images/recipes/dutch-baby-in-pan.jpg",
+        "alt": "Dutch Baby Pancake in a pan."
+      },
+      "description": "An eggy sweet pancake. Tastes and smells like nutmeg and sugar. Rises with heat and falls elsewhere. Is essentially a giant crepe.",
+      "ingredients": [
+        "½ cup flour",
+        "¼ cup sugar",
+        "⅛ teaspoon nutmeg",
+        "3 eggs",
+        "⅔ cup milk",
+        "¼ oil"
+      ],
+      "steps": [
+        "Preheat oven to 425.",
+        "Put pan in oven with oil in it.",
+        "Mix dry ingredients.",
+        "Mix eggs and milk.",
+        "Mix all together.",
+        "Let sit for 10 minutes.",
+        "Pour into pan.",
+        "Bake for 14 minutes.",
+        "Enjoy."
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/recipes/dutch-baby-topped-with-sugar.jpg",
+          "alt": "Dutch Baby Pancake topped with sugar."
+        },
+        {
+          "src": "images/recipes/dutch-baby-david-eyres-pancake.jpg",
+          "alt": "David Eyres Pancake, a variation of the Dutch Baby Pancake with no salt."
+        },
+        {
+          "src": "images/recipes/dutch-baby-savory-herb-butter.jpg",
+          "alt": "Savory Herb Butter Dutch Baby, a savory variation. Various garnishes, poached eggs, and salmon are visible."
+        }
+      ],
+      "author": "David Eyre (edited by Eric Xu)"
+    },
+    {
+      "id": 4,
+      "name": "Homemade Tikka Masala",
+      "origin": "India",
+      "source": {
+        "value": "https://tasty.co/recipe/homemade-chicken-tikka-masala",
+        "type": "link"
+      },
+      "category": "Main Dish",
+      "main_img": {
+        "src": "images/recipes/tikka-masala-1.jpg",
+        "alt": "Tikka Masala in a bowl."
+      },
+      "description": "Chicken Tikka Masala is a delicious dish to have for dinner. I had it for dinner last night! It has a nice mixture of savory and sweet flavors, and is best served with Naan and rice and vegetables.",
+      "ingredients": [
+        {
+          "parent": "Chicken Marinade",
+          "children": [
+            "3 boneless, skinless chicken breasts",
+            "½ cup plain yogurt",
+            "2 tablespoons lemon juice",
+            "6 cloves garlic, minced",
+            "1 tablespoon minced ginger",
+            "2 teaspoons salt",
+            "2 teaspoons ground cumin",
+            "2 teaspoons garam masala",
+            "2 teaspoons paprika"
+          ]
+        },
+        {
+          "parent": "Sauce",
+          "children": [
+            "3 tablespoons oil",
+            "1 large onion, finely chopped",
+            "2 tablespoons minced ginger",
+            "8 cloves garlic, minced",
+            "2 teaspoons ground cumin",
+            "2 teaspoons ground turmeric",
+            "2 teaspoons ground coriander",
+            "2 teaspoons paprika",
+            "2 teaspoons chili powder",
+            "2 teaspoons garam masala",
+            "1 tablespoon tomato puree",
+            "3 ½ cups tomato sauce",
+            "1 ¼ cups water",
+            "1 cup heavy cream",
+            "¼ cup fresh cilantro, for garnish",
+            "cooked rice, for serving",
+            "naan bread, for serving"
+          ]
+        }
+      ],
+      "steps": [
+        "Slice the chicken into bite-sized chunks. Combine the cubed chicken with the yogurt, lemon juice, garlic, ginger, salt, cumin, garam masala, and paprika and stir until well-coated.",
+        "Cover and refrigerate for at least 1 hour, or overnight.",
+        "Preheat the oven to 500°F (260°C). Line a high-sided baking pan or roasting tray with parchment paper.",
+        "Place the marinated chicken pieces on bamboo or wooden skewers, then set them over the prepared baking pan, making sure there is space underneath the chicken to help distribute the heat more evenly. Bake for about 15 minutes, until slightly dark brown on the edges.",
+        "Make the sauce: Heat the oil in a large pot over medium heat, then sauté the onions, ginger, and garlic until tender but not browned. Add the cumin, turmeric, coriander, paprika, chili powder, and garam masala and stir constantly for about 30 seconds, until the spices are fragrant. Stir in the tomato puree, tomato sauce, and 1 ¼ cups of water, then bring to a boil and cook for about 5 minutes. Pour in the cream.",
+        "Remove the chicken from the skewers and add to the sauce, cooking for another 1-2 minutes. Garnish with cilantro and serve over rice or alongside naan bread.",
+        "Enjoy!"
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/recipes/tikka-masala-2.jpg",
+          "alt": "Raw chicken with many spices on it in a bowl."
+        },
+        {
+          "src": "images/recipes/tikka-masala-3.jpg",
+          "alt": "Spices mixed together with the chicken in a bowl."
+        },
+        {
+          "src": "images/recipes/tikka-masala-4.jpg",
+          "alt": "Boiling water being poured onto sauce in a pot."
+        }
+      ],
+      "author": "Rachel Sondergeld"
+    }
+  ]
+}

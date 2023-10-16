@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Travel{% endblock title %}
+{% block pre_content %}
+  <header><h1>Travel Destinations</h1></header>
+{% endblock pre_content %}
+
+{% block content %}
+  {% for location in locations %}
+    <article>
+      <h2>{{ location.name }}</h2>
+
+      <img src="{{ location.main_gif.src }}" alt="" width="400" />
+      <img src="{{ location.main_img.src }}" alt="" width="400" />
+
+      <p>Geographical Location: {{ location.geographical_location }}</p>
+      {% for par in location.description %}
+        <p>{{ par }}</p>
+      {% endfor %}
+
+      <h3>Photo Gallery</h3>
+
+      {% for image in location.photo_gallery %}
+        <figure>
+          <img src="{{ image.src }}" alt="{{ image.alt }}" width="200" />
+          <figcaption>{{ image.caption }}</figcaption>
+        </figure>
+      {% endfor %}
+
+      <!--{{ location.author }}-->
+    </article>
+  {% endfor %}
+{% endblock content %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Recipes{% endblock title %}
+{% block pre_content %}
+  <header><h1>Recipes</h1></header>
+{% endblock pre_content %}
+
+{% block content %}
+  {% for recipe in recipes %}
+    <article>
+      <h2>{{ recipe.name }}</h2>
+
+      <p><b>Origin:</b> {{ recipe.origin }}</p>
+      <p>
+        <b>Source:</b>
+        {% if recipe.source.type == "text" %}
+          {{ recipe.source.value }}
+        {% elif recipe.source.type == "link" %}
+          <a href="{{ recipe.source.value }}">{{ recipe.source.value }}</a>
+        {% endif %}
+      </p>
+      <p><b>Category:</b> {{ recipe.category }}</p>
+
+      <img src="{{ recipe.main_img.src }}" alt="" width="400" />
+
+      <p>{{ recipe.description }}</p>
+
+      <h3>Recipe Ingredients</h3>
+
+      <ul>
+        {% for item in recipe.ingredients recursive %}
+          <li>
+            {% if item is string %}
+              {{ item }}
+            {% else %}
+              {{ item.parent }}
+              <ul>{{ loop(item.children) }}</ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <h3>Recipe Steps</h3>
+
+      <ol>
+        {% for step in recipe.steps %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+
+      <h3>Additional Images</h3>
+
+      {% for image in recipe.photo_gallery %}
+        <img src="{{ image.src }}" alt="{{ image.alt }}" width="200" />
+      {% endfor %}
+
+      <!--{{ recipe.author }}-->
+    </article>
+  {% endfor %}
+{% endblock content %}

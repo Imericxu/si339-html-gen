@@ -1,0 +1,196 @@
+{
+  "locations": [
+    {
+      "id": 0,
+      "name": "Berlin, Germany",
+      "main_gif": {
+        "src": "images/travel/berlin.gif",
+        "alt": "Multiple timelapses of Berlin at night time at different locations.",
+        "attribution": {
+          "name": "Exploropia",
+          "src": "https://www.youtube.com/watch?v=4SGLxZnqYIg"
+        }
+      },
+      "main_img": {
+        "src": "images/travel/berlin-brandenburg-gate.jpg",
+        "alt": "The Brandenburg Gate in Berlin, Germany.",
+        "attribution": {
+          "name": "Thomas Wolf",
+          "src": "https://commons.wikimedia.org/wiki/File:Brandenburger_Tor_abends.jpg",
+          "license": {
+            "type": "CC BY-SA 3.0",
+            "src": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+          }
+        }
+      },
+      "geographical_location": "Europe",
+      "description": [
+        "Berlin, a city of fascinating contrasts, seamlessly blends a storied past with a cutting-edge present. The Brandenburg Gate, an iconic symbol, stands as a reminder of history, while sleek modern architecture shapes the skyline. The city’s artistic spirit thrives, evident in vibrant street art, avant-garde galleries, and the East Side Gallery’s striking murals on the Berlin Wall’s remnants.",
+        "Berlin’s neighborhoods each offer a distinct flavor. Kreuzberg brims with bohemian energy, Prenzlauer Berg exudes hipster charm, and Charlottenburg boasts elegance. As the sun sets, Berlin’s renowned nightlife awakens. Legendary techno beats pulse through clubs like Berghain, offering an unforgettable nocturnal adventure. From exploring solemn historical sites to savoring culinary delights in bustling markets or finding tranquility in its ample green spaces, Berlin invites you to explore its multifaceted identity, where history dances with innovation at every corner."
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/travel/berlin-at-night.jpg",
+          "alt": "An aerial city view of Berlin at night. There are many colorful lights that light up the night.",
+          "caption": "Berlin is perfect for those who love a vibrant nightlife."
+        },
+        {
+          "src": "images/travel/berlin-charlottenburg-palace.jpg",
+          "alt": "Front of the Charlottenburg Palace; taken from the path leading up to it with small trees lining the path.",
+          "caption": "Discovering regal history at Charlottenburg Palace. A glimpse into the past of Berlin’s royalty."
+        },
+        {
+          "src": "images/travel/berlin-holocaust-memorial.jpg",
+          "alt": "Aerial view of the Holocaust Memorial",
+          "caption": "Reflect amidst the stark beauty of the Holocaust Memorial – a space for remembrance, contemplation, and unity."
+        },
+        {
+          "src": "images/travel/berlin-reichstag-building.jpg",
+          "alt": "Front of Reichstag building taken from an angle over some bushes that are turning orange (autumn time).",
+          "caption": "An architectural masterpiece that has witnessed history unfold, the Reichstag is a symbol of democracy and continuity."
+        },
+        {
+          "src": "images/travel/berlin-reichstag-dome-interior.jpg",
+          "alt": "Interior of the Reichstag Dome with the center structure in the middle.",
+          "caption": "Where Skylight Meets Insight: Inside the Reichstag Dome, Where History and Modernity Converge."
+        }
+      ],
+      "author": "Eric Xu"
+    },
+    {
+      "id": 1,
+      "name": "Seoul, South Korea",
+      "main_gif": {
+        "src": "images/travel/seoul-night.gif",
+        "alt": "Timelapse of Seoul at night time."
+      },
+      "main_img": {
+        "src": "images/travel/seoul-night.jpg",
+        "alt": "Lights from buildings and cars illuminate the night sky."
+      },
+      "geographical_location": "Asia",
+      "description": [
+        "Seoul is the capital of South Korea and it is a city enshrined in history. The Han river runs through Seoul, dividing it into two parts. Additionally, there are many mountains in and around Seoul, making it so the city has a lot of hills.",
+        "Seoul is the perfect blend of modern and historical with five royal palaces and several shrines. Additionally, there are plenty of fun shopping areas in Seoul such as Hongdae, Insadong, and Gangam. Lastly, Seoul is a city of cafes with one on almost every block and several fun cafe experiences to try out, especially in Yeonnam."
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/travel/seoul-namsan.jpg",
+          "alt": "A tower on a hill overlooking the city",
+          "caption": "Enjoy panoramic views of Seoul from Namsan Tower."
+        },
+        {
+          "src": "images/travel/seoul-hongdae.jpg",
+          "alt": "A colorful street at night with people walking down it.",
+          "caption": "With tons of interesting stores, Hongdae is a great place to shop and experience the nightlife."
+        },
+        {
+          "src": "images/travel/seoul-gyeongbokgung.jpg",
+          "alt": "A palace sits in front of mountains.",
+          "caption": "Learn about the history of Seoul and visit Gyeongbokgung palace, one of the many palaces Seoul has to offer."
+        },
+        {
+          "src": "images/travel/seoul-gwangjang.jpg",
+          "alt": "A vibrant market with lots of people in it.",
+          "caption": "Try Korean street food for a low cost by visiting Gwangjang market."
+        },
+        {
+          "src": "images/travel/seoul-ikseondong.jpg",
+          "alt": "A small street running through traditional style buildings.",
+          "caption": "Go to Ikseondong to try several unique cafes and stroll around traditional hanok style buildings."
+        }
+      ],
+      "author": "Claire Callen and Malwine Fischer"
+    },
+    {
+      "id": 2,
+      "name": "Apostle Islands, Wisconsin",
+      "main_gif": {
+        "src": "images/travel/apostle-islands.gif",
+        "alt": "Water crashing against the cliffs of the Apostle Islands."
+      },
+      "main_img": {
+        "src": "images/travel/apostle-islands.jpg",
+        "alt": "A view of the Apostle Islands from the water."
+      },
+      "geographical_location": "North America",
+      "description": [
+        "The Apostle Islands are a collection of 22 islands in Lake Superior located in the northern region of Wisconsin, USA. Originally inhabited by the Ojibwe (Chippewa) people, the islands contain over hundreds of years worth of rich Native American history. In 1970, 21 of the islands and the surrounding waters were designated as the Apostle Islands National Lakeshore, a protected area managed by the National Park Service. Lastly, the islands are home to a diverse range of wildlife, including, white-tailed deer, black bears and various bird species.",
+        "There are six lighthouses spread across the islands, making it one of the largest collections of lighthouses in the United States. When the island receives visitors it is viewed as a popular destination for outdoor activities such as kayaking, sailing, hiking and camping. In addition, many people enjoy other activities such as berry picking. Camping is also allowed in 19 of the 21 islands to date."
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/travel/apostle-caves-winter.jpeg",
+          "alt": "Ice caves in the winter.",
+          "caption": "In winter, when the lake freezes, the sea caves turn into ice caves. This can create a magical, otherworldly landscape!"
+        },
+        {
+          "src": "images/travel/apostle-lighthouses.jpg",
+          "alt": "A single lighthouse stands among trees on a cliff.",
+          "caption": "Lighthouses of the Apostle Islands."
+        },
+        {
+          "src": "images/travel/apostle-northern-lights.jpg",
+          "alt": "Beautiful lights, mostly green and some red, light up the night sky. A small island floats in the calm water.",
+          "caption": "The northern lights can be viewed from the Apostle Islands."
+        },
+        {
+          "src": "images/travel/apostle-wildlife.jpg",
+          "alt": "An American marten on a branch snarling at the camera.",
+          "caption": "American marten, endangered mammal native to the islands."
+        },
+        {
+          "src": "images/travel/apostle-plants.jpg",
+          "alt": "A leafy plant on the ground with red berries.",
+          "caption": "White Manderin plant"
+        }
+      ],
+      "author": "Michelle Lockett (edited by Eric Xu)"
+    },
+    {
+      "id": 3,
+      "name": "Ebenalp Mountain, Switzerland",
+      "main_gif": {
+        "src": "images/travel/ebenalp-sunrise.gif",
+        "alt": "Timelapse of the sunrise over Ebenalp Mountain."
+      },
+      "main_img": {
+        "src": "images/travel/ebenalp-seealpsee-lake.jpeg",
+        "alt": "Small lake framed by forest on the left and mountains on the right. A mountain stands in the background."
+      },
+      "geographical_location": "Central Europe",
+      "description": [
+        "Ebenalp Mountain graces Switzerland’s Appenzell Alps with rugged beauty. Hikers explore well-marked trails, and at the peak, the iconic Ebenalp Cliff offers panoramic views. Thrill-seekers can paraglide from its heights, while the mountaintop Berggasthaus Schäfler provides a unique stay immersed in alpine charm. For a memorable dining experience, the side-of-the-mountain Aescher Restaurant offers local cuisine amidst stunning vistas. Ebenalp Mountain is a breathtaking destination that blends natural splendor with exciting activities and culinary delights, catering to adventurous spirits.",
+        "Just a stone’s throw away from the majestic Ebenalp Mountain in Switzerland’s Appenzell Alps, Seealpsee Lake stands as a serene counterpart to the rugged heights above. This picturesque alpine lake is a reward for those who embark on the hiking trails around Ebenalp. The crystal-clear waters of Seealpsee Lake beautifully reflect the towering peaks and lush meadows, creating an enchanting panorama. Amidst this natural wonder lies a charming lakeside restaurant where visitors can savor local delicacies while gazing upon the breathtaking scenery."
+      ],
+      "photo_gallery": [
+        {
+          "src": "images/travel/ebenalp-cow.jpg",
+          "alt": "A cow facing the camera being petted on the head by Elijah.",
+          "caption": "Petting a cow on Ebenalp."
+        },
+        {
+          "src": "images/travel/ebenalp-abys.jpeg",
+          "alt": "A thin trail stretches across a mountain with a steep drop on the right side. Elijah on the trail.",
+          "caption": "Berggasthaus Schäfler trail."
+        },
+        {
+          "src": "images/travel/ebenalp-seealpsee-overlook.jpeg",
+          "alt": "A steep cliff and greenery in the foreground overlooks a lake and mountains in the background. Clouds cover the mountains.",
+          "caption": "Overlook of Seealpsee lake."
+        },
+        {
+          "src": "images/travel/ebenalp-cow-elijah.jpeg",
+          "alt": "Elijah takes a selfie with cow grazing in background on sloped grassy hill.",
+          "caption": "Cow above the clouds."
+        },
+        {
+          "src": "images/travel/ebenalp-lake-elijah.jpeg",
+          "alt": "Elijah standing on a rocky shore in front of a lake with mountains in the background.",
+          "caption": "Seealpsee lake rocks."
+        }
+      ],
+      "author": "Elijah Cantu (edited by Eric Xu)"
+    }
+  ]
+}

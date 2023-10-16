@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Pets{% endblock title %}
+{% block pre_content %}
+  <header><h1>Pets</h1></header>
+{% endblock pre_content %}
+
+{% block content %}
+  {% for pet in pets %}
+    <article>
+      <h2>{{ pet.name }}</h2>
+
+      <img src="{{ pet.main_img.src }}" alt="{{ pet.main_img.alt }}" width="400" />
+
+      {% for par in pet.description %}
+        <p>{{ par }}</p>
+      {% endfor %}
+
+      <h3>Photo Gallery</h3>
+
+      {% for image in pet.photo_gallery %}
+        <img src="{{ image.src }}" alt="{{ image.alt }}" width="200" />
+      {% endfor %}
+
+      <h3>Likes</h3>
+
+      <ul>
+        {% for thing in pet.liked_things %}
+          <li>{{ thing }}</li>
+        {% endfor %}
+      </ul>
+
+      <!--{{ pet.author }}-->
+    </article>
+  {% endfor %}
+{% endblock content %}
