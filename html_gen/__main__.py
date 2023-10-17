@@ -59,11 +59,17 @@ def main():
         ]
     )
 
-    # Format output with Prettier
+    # Format HTML and CSS with Prettier
     print("Running Prettier...")
-    subprocess.run(["npx", "prettier", "--write", str(OUT_DIR / "*.html")])
     subprocess.run(
-        ["npx", "prettier", "--write", str(OUT_DIR / "css" / "*.css")]
+        [
+            "npx",
+            "prettier",
+            "--ignore-path",
+            ".prettierignore",
+            "--write",
+            str(OUT_DIR / "**" / "*.{css,html}"),
+        ]
     )
 
     # Copy images if modified or missing
