@@ -45,18 +45,23 @@ def main():
     render_template_to_file(env, "travel", **travel)
     render_template_to_file(env, "recipes", **recipes)
 
-    # Pass CSS through Autoprefixer
+    # Generate CSS from SCSS
+    print("Running Sass...")
+    subprocess.run(
+        ["npx", "sass", f"{str(STATIC_PATH / 'css')}:{str(OUT_DIR / 'css')}"]
+    )
+
+    # Pass generated CSS through Autoprefixer
     print("Running Autoprefixer...")
     subprocess.run(
         [
             "npx",
             "postcss",
-            str(STATIC_PATH / "css" / "*.css"),
             "--use",
             "autoprefixer",
-            "-d",
-            str(OUT_DIR / "css"),
-        ]
+            "--replace",
+            str(OUT_DIR / "css" / "*.css"),
+        ],
     )
 
     # Format HTML and CSS with Prettier
