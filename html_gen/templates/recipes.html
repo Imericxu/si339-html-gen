@@ -20,7 +20,7 @@
       </p>
       <p><b>Category:</b> {{ recipe.category }}</p>
 
-      <img src="{{ recipe.main_img.src }}" alt="" width="400" />
+      <img src="{{ recipe.main_img.src }}" alt="" />
 
       <p>{{ recipe.description }}</p>
 
@@ -50,7 +50,7 @@
       <h3>Additional Images</h3>
 
       {% for image in recipe.photo_gallery %}
-        <img src="{{ image.src }}" alt="{{ image.alt }}" width="200" />
+        <img src="{{ image.src }}" alt="{{ image.alt }}" />
       {% endfor %}
 
       <!--{{ recipe.author }}-->
