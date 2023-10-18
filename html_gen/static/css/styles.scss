@@ -148,8 +148,10 @@ img {
       }
 
       &:hover,
-      &:active {
+      &:active,
+      a:focus {
         background-color: var(--clr-neutral-1);
+        outline: none;
       }
     }
 
