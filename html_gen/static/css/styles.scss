@@ -53,7 +53,9 @@ img {
   align-items: flex-end;
   z-index: 100;
   width: 100vw;
+  height: 0;
   overflow: visible;
+  pointer-events: none;
 
   // Contains nav title and list. Events are triggered on this element
   &--container {
