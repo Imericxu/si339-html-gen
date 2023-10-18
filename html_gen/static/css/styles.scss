@@ -156,9 +156,11 @@
     }
 
     a {
-      display: inline-block;
+      display: flex;
+      align-items: center;
       padding: 8px 32px 8px 24px;
       width: 100%;
+      min-height: 48px;
     }
   }
 
