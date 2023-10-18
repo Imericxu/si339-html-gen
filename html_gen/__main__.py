@@ -48,7 +48,12 @@ def main():
     # Generate CSS from SCSS
     print("Running Sass...")
     subprocess.run(
-        ["npx", "sass", f"{str(STATIC_PATH / 'css')}:{str(OUT_DIR / 'css')}"]
+        [
+            "npx",
+            "sass",
+            "--no-source-map",
+            f"{str(STATIC_PATH / 'css')}:{str(OUT_DIR / 'css')}",
+        ]
     )
 
     # Pass generated CSS through Autoprefixer
@@ -57,6 +62,7 @@ def main():
         [
             "npx",
             "postcss",
+            "--no-map",
             "--use",
             "autoprefixer",
             "--replace",
