@@ -64,7 +64,22 @@ def main():
         ],
     )
 
-    # Format HTML and CSS with Prettier
+    # Copy JS
+    print("Copying JS...")
+    subprocess.run(
+        [
+            "rsync",
+            "-av",
+            "--update",
+            "--delete",
+            "--exclude",
+            ".*",
+            str(STATIC_PATH / "js"),
+            str(OUT_DIR),
+        ]
+    )
+
+    # Format HTML, CSS, and JS with Prettier
     print("Running Prettier...")
     subprocess.run(
         [
@@ -73,7 +88,7 @@ def main():
             "--ignore-path",
             ".prettierignore",
             "--write",
-            str(OUT_DIR / "**" / "*.{css,html}"),
+            str(OUT_DIR / "**" / "*.{css,html,js}"),
         ]
     )
 
