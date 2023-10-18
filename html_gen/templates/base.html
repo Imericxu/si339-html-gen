@@ -3,37 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Fonts -->
+    <!--Google Fonts-->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <!-- Normalize styles across browsers -->
+    <!--Normalize styles across browsers-->
     <link href="css/reset.css" rel="stylesheet" />
     <!--Restore useful defaults-->
     <link href="css/defaults.css" rel="stylesheet" />
-    <!-- Custom styles -->
+    <!--Custom styles-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/cbbaf4368b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Custom JS-->
+    <script src="js/scripts.js" defer></script>
     <title>{% block title required %}{% endblock %}</title>
   </head>
 
   <body>
-    <a href="#main-content">Skip to Main Content</a>
+    <a class="hidden-focusable-banner" href="#main-content" tabindex="1">Skip to Main Content</a>
 
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html">Pets</a>
-        </li>
-        <li>
-          <a href="travel.html">Travel</a>
-        </li>
-        <li>
-          <a href="recipes.html">Recipes</a>
-        </li>
-      </ul>
+    <nav class="nav">
+      <div class="nav--container">
+        <div class="nav--content">
+          <ul class="nav--list">
+            <li>
+              <a
+                {% if nav_page == "index" %}
+                  class="nav--link-current"
+                {% endif %}
+                href="index.html"
+              >
+                <i class="fa-solid fa-paw fa-sm"></i> Pets
+              </a>
+            </li>
+            <li>
+              <a
+                {% if nav_page == "travel" %}
+                  class="nav--link-current"
+                {% endif %}
+                href="travel.html"
+              >
+                <i class="fa-solid fa-plane fa-sm"></i> Travel
+              </a>
+            </li>
+            <li>
+              <a
+                {% if nav_page == "recipes" %}
+                  class="nav--link-current"
+                {% endif %}
+                href="recipes.html"
+              >
+                <i class="fa-solid fa-utensils fa-sm"></i> Recipes
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Empty onclick to allow "hover" state on mobile-->
+        <button
+          class="nav--btn"
+          tabindex="2"
+        >
+          <span class="nav--btn--text">
+            {% if nav_page == "index" %}
+              <i class="fa-solid fa-paw"></i> Pets
+            {% elif nav_page == "travel" %}
+              <i class="fa-solid fa-plane"></i> Travel
+            {% elif nav_page == "recipes" %}
+              <i class="fa-solid fa-utensils"></i> Recipes
+            {% endif %}
+          </span>
+          <span class="nav--btn--icon">
+            <i class="fa-solid fa-chevron-up"></i>
+          </span>
+        </button>
+      </div>
     </nav>
 
     {% block pre_content %}{% endblock %}
