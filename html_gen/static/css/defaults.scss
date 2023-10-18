@@ -114,4 +114,9 @@ ul {
   html {
     scroll-behavior: auto;
   }
+
+  // Replace gifs with static placeholder image
+  img[src$=".gif"] {
+    content: url("../images/reduced-motion.jpg");
+  }
 }
