@@ -1,6 +1,7 @@
 import json
 import subprocess
 from pathlib import Path
+from urllib.parse import quote
 
 import jinja2
 from jinja2 import Environment, PackageLoader, Template, select_autoescape
@@ -10,11 +11,18 @@ from html_gen import STATIC_PATH
 OUT_DIR: Path = Path("build").resolve()
 
 
-def render_template_to_file(env: Environment, name: str, **kwargs):
-    template: Template = env.get_template(f"{name}.html")
-    out_path = OUT_DIR / f"{name}.html"
+def render_template_to_file(
+    env: Environment,
+    template_name: str,
+    output_name: str | None = None,
+    nest_level: int = 0,
+    **kwargs,
+):
+    template: Template = env.get_template(f"{template_name}.html")
+    out_path = OUT_DIR / f"{output_name or template_name}.html"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     with out_path.open("w") as f:
-        f.write(template.render(**kwargs))
+        f.write(template.render(**kwargs, nest_level=nest_level))
 
 
 def main():
@@ -42,6 +50,16 @@ def main():
     # Render templates
     print("Rendering templates...")
     render_template_to_file(env, "index", **pets)
+    # Render individual pet pages
+    for pet in pets["pets"]:
+        out_name: str = quote(f"pet/{pet['id']}-{pet['name']}".lower())
+        render_template_to_file(
+            env,
+            template_name="pet/pet-detail",
+            output_name=out_name,
+            nest_level=1,
+            **pet,
+        )
     render_template_to_file(env, "travel", **travel)
     render_template_to_file(env, "recipes", **recipes)
 
@@ -85,19 +103,6 @@ def main():
         ]
     )
 
-    # Format HTML, CSS, and JS with Prettier
-    print("Running Prettier...")
-    subprocess.run(
-        [
-            "npx",
-            "prettier",
-            "--ignore-path",
-            ".prettierignore",
-            "--write",
-            str(OUT_DIR / "**" / "*.{css,html,js}"),
-        ]
-    )
-
     # Copy images if modified or missing
     # Images are in `STATIC_PATH / "images"`
     # Destination is `OUT_DIR / "images"`
@@ -112,6 +117,19 @@ def main():
             ".*",
             str(STATIC_PATH / "images"),
             str(OUT_DIR),
+        ]
+    )
+
+    # Format HTML, CSS, and JS with Prettier
+    print("Running Prettier...")
+    subprocess.run(
+        [
+            "npx",
+            "prettier",
+            "--ignore-path",
+            ".prettierignore",
+            "--write",
+            str(OUT_DIR / "**" / "*.{css,html,js}"),
         ]
     )
 

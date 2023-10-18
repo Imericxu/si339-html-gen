@@ -7,7 +7,7 @@
             {% if nav_page == "index" %}
               class="nav--link-current"
             {% endif %}
-            href="index.html"
+            href="{{ url_prefix }}index.html"
           >
             <i class="fa-solid fa-paw fa-sm"></i> Pets
           </a>
@@ -17,7 +17,7 @@
             {% if nav_page == "travel" %}
               class="nav--link-current"
             {% endif %}
-            href="travel.html"
+            href="{{ url_prefix }}travel.html"
           >
             <i class="fa-solid fa-plane fa-sm"></i> Travel
           </a>
@@ -27,7 +27,7 @@
             {% if nav_page == "recipes" %}
               class="nav--link-current"
             {% endif %}
-            href="recipes.html"
+            href="{{ url_prefix }}recipes.html"
           >
             <i class="fa-solid fa-utensils fa-sm"></i> Recipes
           </a>

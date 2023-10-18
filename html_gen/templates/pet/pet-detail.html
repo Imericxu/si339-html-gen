@@ -1,0 +1,33 @@
+{% set nav_page = "index" %}
+
+{% extends "base.html" %}
+{% block title %}{{ name }}{% endblock title %}
+{% block pre_content %}
+  {% include "components/nav.html" %}
+
+  <header><h1>{{ name }}</h1></header>
+{% endblock pre_content %}
+
+{% block content %}
+  <img class="full-width" src="{{ url_prefix }}{{ main_img.src }}" alt="{{ main_img.alt }}" />
+
+  {% for par in description %}
+    <p>{{ par }}</p>
+  {% endfor %}
+
+  <h3>Photo Gallery</h3>
+
+  {% for image in photo_gallery %}
+    <img class="full-width" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+  {% endfor %}
+
+  <h3>Likes</h3>
+
+  <ul>
+    {% for thing in liked_things %}
+      <li>{{ thing }}</li>
+    {% endfor %}
+  </ul>
+
+  <!--{{ author }}-->
+{% endblock content %}

@@ -13,8 +13,8 @@
     <article>
       <h2>{{ location.name }}</h2>
 
-      <img src="{{ location.main_gif.src }}" alt="" />
-      <img src="{{ location.main_img.src }}" alt="" />
+      <img class="full-width" src="{{ url_prefix }}{{ location.main_gif.src }}" alt="" />
+      <img class="full-width" src="{{ url_prefix }}{{ location.main_img.src }}" alt="" />
 
       <p>Geographical Location: {{ location.geographical_location }}</p>
       {% for par in location.description %}
@@ -25,7 +25,7 @@
 
       {% for image in location.photo_gallery %}
         <figure>
-          <img src="{{ image.src }}" alt="{{ image.alt }}" />
+          <img class="full-width" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
           <figcaption>{{ image.caption }}</figcaption>
         </figure>
       {% endfor %}

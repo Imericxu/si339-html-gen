@@ -9,31 +9,17 @@
 {% endblock pre_content %}
 
 {% block content %}
-  {% for pet in pets %}
-    <article>
-      <h2>{{ pet.name }}</h2>
-
-      <img src="{{ pet.main_img.src }}" alt="{{ pet.main_img.alt }}" />
-
-      {% for par in pet.description %}
-        <p>{{ par }}</p>
-      {% endfor %}
-
-      <h3>Photo Gallery</h3>
-
-      {% for image in pet.photo_gallery %}
-        <img src="{{ image.src }}" alt="{{ image.alt }}" />
-      {% endfor %}
-
-      <h3>Likes</h3>
-
-      <ul>
-        {% for thing in pet.liked_things %}
-          <li>{{ thing }}</li>
-        {% endfor %}
-      </ul>
-
-      <!--{{ pet.author }}-->
-    </article>
-  {% endfor %}
+  <section class="grid">
+    {% for pet in pets %}
+      <a class="grid-item" href="{{ url_prefix }}pet/{{ pet.id }}-{{ pet.name | lower }}.html">
+        <figure class="grid--figure">
+          <div class="grid--figure--img-container">
+            <img src="{{ url_prefix }}{{ pet.main_img.src }}" alt="{{ pet.main_img.alt }}" />
+          </div>
+          <figcaption>{{ pet.name }}</figcaption>
+        </figure>
+        <!--{{ pet.author }}-->
+      </a>
+    {% endfor %}
+  </section>
 {% endblock content %}
