@@ -6,6 +6,9 @@
           <a
             {% if nav_page == "index" %}
               class="nav--link-current"
+              {% if nest_level == 0 %}
+                aria-current="page"
+              {% endif %}
             {% endif %}
             href="{{ url_prefix }}index.html"
           >
@@ -16,6 +19,9 @@
           <a
             {% if nav_page == "travel" %}
               class="nav--link-current"
+              {% if nest_level == 0 %}
+                aria-current="page"
+              {% endif %}
             {% endif %}
             href="{{ url_prefix }}travel.html"
           >
@@ -26,6 +32,9 @@
           <a
             {% if nav_page == "recipes" %}
               class="nav--link-current"
+              {% if nest_level == 0 %}
+                aria-current="page"
+              {% endif %}
             {% endif %}
             href="{{ url_prefix }}recipes.html"
           >
