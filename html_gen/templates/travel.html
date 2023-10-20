@@ -5,32 +5,24 @@
 {% block pre_content %}
   {% include "components/nav.html" %}
 
-  <header><h1>Travel Destinations</h1></header>
+  <header><h1>Travel</h1></header>
 {% endblock pre_content %}
 
 {% block content %}
-  {% for location in locations %}
-    <article>
-      <h2>{{ location.name }}</h2>
-
-      <img class="full-width" src="{{ url_prefix }}{{ location.main_gif.src }}" alt="" />
-      <img class="full-width" src="{{ url_prefix }}{{ location.main_img.src }}" alt="" />
-
-      <p>Geographical Location: {{ location.geographical_location }}</p>
-      {% for par in location.description %}
-        <p>{{ par }}</p>
-      {% endfor %}
-
-      <h3>Photo Gallery</h3>
-
-      {% for image in location.photo_gallery %}
-        <figure>
-          <img class="full-width" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
-          <figcaption>{{ image.caption }}</figcaption>
+  <section class="grid">
+    {% for location in locations %}
+      <a
+        class="grid-item"
+        href="{{ url_prefix }}{{ location.slug | e }}.html"
+      >
+        <figure class="grid--figure">
+          <div class="grid--figure--img-container">
+            <img src="{{ url_prefix }}{{ location.main_img.src }}" alt="{{ location.main_img.alt }}" />
+          </div>
+          <figcaption>{{ location.name }}</figcaption>
         </figure>
-      {% endfor %}
-
-      <!--{{ location.author }}-->
-    </article>
-  {% endfor %}
+        <!--{{ location.author }}-->
+      </a>
+    {% endfor %}
+  </section>
 {% endblock content %}

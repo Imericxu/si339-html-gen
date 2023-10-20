@@ -11,7 +11,7 @@
 {% block content %}
   <section class="grid">
     {% for pet in pets %}
-      <a class="grid-item" href="{{ url_prefix }}pet/{{ pet.id }}-{{ pet.name | lower }}.html">
+      <a class="grid-item" href="{{ url_prefix }}{{ pet.slug | e }}.html">
         <figure class="grid--figure">
           <div class="grid--figure--img-container">
             <img src="{{ url_prefix }}{{ pet.main_img.src }}" alt="{{ pet.main_img.alt }}" />

@@ -1,0 +1,56 @@
+{% set nav_page = "recipes" %}
+
+{% extends "base.html" %}
+{% block title %}{{ name }}{% endblock title %}
+{% block pre_content %}
+  {% include "components/nav.html" %}
+  <header><h1>{{ name }}</h1></header>
+{% endblock pre_content %}
+
+{% block content %}
+  <p><b>Origin:</b> {{ origin }}</p>
+  <p>
+    <b>Source:</b>
+    {% if source.type == "text" %}
+      {{ source.value }}
+    {% elif source.type == "link" %}
+      <a href="{{ url_prefix }}{{ source.value }}">{{ source.value }}</a>
+    {% endif %}
+  </p>
+  <p><b>Category:</b> {{ category }}</p>
+
+  <img class="full-width" src="{{ url_prefix }}{{ main_img.src }}" alt="" />
+
+  <p>{{ description }}</p>
+
+  <h3>Recipe Ingredients</h3>
+
+  <ul>
+    {% for item in ingredients recursive %}
+      <li>
+        {% if item is string %}
+          {{ item }}
+        {% else %}
+          {{ item.parent }}
+          <ul>{{ loop(item.children) }}</ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h3>Recipe Steps</h3>
+
+  <ol>
+    {% for step in steps %}
+      <li>{{ step }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>Additional Images</h3>
+
+  {% for image in photo_gallery %}
+    <img class="full-width" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+  {% endfor %}
+
+  <!--{{ author }}-->
+{% endblock content %}

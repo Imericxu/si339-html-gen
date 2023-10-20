@@ -25,6 +25,10 @@ def render_template_to_file(
         f.write(template.render(**kwargs, nest_level=nest_level))
 
 
+def to_alnum_only(s: str) -> str:
+    return "".join(c for c in s if c.isalnum())
+
+
 def main():
     env = Environment(
         loader=PackageLoader("html_gen", "templates"),
@@ -37,12 +41,28 @@ def main():
     # Load pets data
     with (STATIC_PATH / "data" / "pets.json").open() as f:
         pets = json.load(f)
+        # Add Slugs
+        for pet in pets["pets"]:
+            pet["slug"] = (
+                f"pet/{pet['id']}-{to_alnum_only(pet['name'])}".lower()
+            )
     # Load travel data
     with (STATIC_PATH / "data" / "travel.json").open() as f:
         travel = json.load(f)
+        # Add Slugs
+        for location in travel["locations"]:
+            location["slug"] = (
+                f"travel/{location['id']}-{to_alnum_only(location['name'])}"
+                .lower()
+            )
     # Load recipes data
     with (STATIC_PATH / "data" / "recipes.json").open() as f:
         recipes = json.load(f)
+        # Add Slugs
+        for recipe in recipes["recipes"]:
+            recipe["slug"] = (
+                f"recipes/{recipe['id']}-{to_alnum_only(recipe['name'])}".lower()
+            )
 
     # Make output directory
     OUT_DIR.mkdir(exist_ok=True)
@@ -52,16 +72,33 @@ def main():
     render_template_to_file(env, "index", **pets)
     # Render individual pet pages
     for pet in pets["pets"]:
-        out_name: str = quote(f"pet/{pet['id']}-{pet['name']}".lower())
         render_template_to_file(
             env,
             template_name="pet/pet-detail",
-            output_name=out_name,
+            output_name=pet["slug"],
             nest_level=1,
             **pet,
         )
     render_template_to_file(env, "travel", **travel)
+    # Render individual travel pages
+    for location in travel["locations"]:
+        render_template_to_file(
+            env,
+            template_name="travel/travel-detail",
+            output_name=location["slug"],
+            nest_level=1,
+            **location,
+        )
     render_template_to_file(env, "recipes", **recipes)
+    # Render individual recipe pages
+    for recipe in recipes["recipes"]:
+        render_template_to_file(
+            env,
+            template_name="recipe/recipe-detail",
+            output_name=recipe["slug"],
+            nest_level=1,
+            **recipe,
+        )
 
     # Generate CSS from SCSS
     print("Running Sass...")
