@@ -5,7 +5,7 @@
       "name": "Tomato and Eggs",
       "origin": "China",
       "source": {
-        "value": "Own Recipe",
+        "value": "Alex Ni's Recipe",
         "type": "text"
       },
       "category": "Main Dish",
@@ -99,7 +99,7 @@
       "name": "Dead Simple Fried Rice",
       "origin": "American/East Asian",
       "source": {
-        "value": "Self",
+        "value": "Tristan Goodell's Recipe",
         "type": "text"
       },
       "category": "Main Dish",
@@ -151,7 +151,7 @@
       "name": "Dutch Baby Pancake",
       "origin": "Germany",
       "source": {
-        "value": "Own Recipe",
+        "value": "David Eyre's Recipe",
         "type": "text"
       },
       "category": "Breakfast, Main Dish",
