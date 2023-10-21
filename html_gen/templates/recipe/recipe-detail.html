@@ -19,7 +19,7 @@
   </p>
   <p><b>Category:</b> {{ category }}</p>
 
-  <img class="full-width" src="{{ url_prefix }}{{ main_img.src }}" alt="" />
+  <img src="{{ url_prefix }}{{ main_img.src }}" alt="" />
 
   <p>{{ description }}</p>
 
@@ -49,7 +49,7 @@
   <h3>Additional Images</h3>
 
   {% for image in photo_gallery %}
-    <img class="full-width" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+    <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
   {% endfor %}
 
   <!--{{ author }}-->

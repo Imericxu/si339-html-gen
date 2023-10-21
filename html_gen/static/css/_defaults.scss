@@ -3,6 +3,8 @@
 @use "vars";
 
 :root {
+  --dim-padding-page: 8px;
+
   --clr-neutral-0: hsl(0, 0%, 98%);
   --clr-neutral-1: hsl(0, 0%, 90%);
   --clr-neutral-2: hsl(220, 3%, 80%);
@@ -24,10 +26,6 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   line-height: 1.5;
-}
-
-body {
-  padding: vars.$padding-global;
 }
 
 /* Tags sorted alphabetically */

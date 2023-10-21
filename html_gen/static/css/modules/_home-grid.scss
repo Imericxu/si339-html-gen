@@ -6,9 +6,8 @@
   position: relative;
   grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
   grid-auto-rows: 200px;
-  margin-left: -1 * vars.$padding-global;
-  width: 100vw;
   gap: 1px;
+  width: 100%;
 }
 
 .home-grid__item {

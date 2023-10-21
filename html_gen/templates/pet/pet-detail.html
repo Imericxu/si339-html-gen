@@ -9,7 +9,7 @@
 {% endblock pre_content %}
 
 {% block content %}
-  <img class="full-width" src="{{ url_prefix }}{{ main_img.src }}" alt="{{ main_img.alt }}" />
+  <img src="{{ url_prefix }}{{ main_img.src }}" alt="{{ main_img.alt }}" />
 
   {% for par in description %}
     <p>{{ par }}</p>
@@ -18,7 +18,7 @@
   <h3>Photo Gallery</h3>
 
   {% for image in photo_gallery %}
-    <img class="full-width" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+    <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
   {% endfor %}
 
   <h3>Likes</h3>

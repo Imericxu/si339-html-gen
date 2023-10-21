@@ -9,8 +9,8 @@
 {% endblock pre_content %}
 
 {% block content %}
-  <img class="full-width" src="{{ url_prefix }}{{ main_gif.src }}" alt="" />
-  <img class="full-width" src="{{ url_prefix }}{{ main_img.src }}" alt="" />
+  <img src="{{ url_prefix }}{{ main_gif.src }}" alt="" />
+  <img src="{{ url_prefix }}{{ main_img.src }}" alt="" />
 
   <p>Geographical Location: {{ geographical_location }}</p>
   {% for par in description %}
@@ -21,7 +21,7 @@
 
   {% for image in photo_gallery %}
     <figure>
-      <img class="full-width" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+      <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
       <figcaption>{{ image.caption }}</figcaption>
     </figure>
   {% endfor %}

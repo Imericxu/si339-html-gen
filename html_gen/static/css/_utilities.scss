@@ -2,12 +2,6 @@
 
 @use "vars";
 
-.full-width {
-  /* Negative margin to counteract body padding */
-  margin-left: -1 * vars.$padding-global;
-  width: 100vw;
-}
-
 .img-blur-decor {
   /* Zoom in to cover blurred edges */
   transform: scale(1.5);
