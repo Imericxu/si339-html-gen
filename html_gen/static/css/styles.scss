@@ -4,14 +4,6 @@
 @import "defaults", "utilities", "layout";
 @import "modules/dropup";
 
-#skip-to-main {
-  overflow: hidden;
-
-  &:focus {
-    overflow: visible;
-  }
-}
-
 // Don't allow expanding grid cells to affect grid layout
 .grid {
   display: grid;
