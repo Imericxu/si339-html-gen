@@ -22,6 +22,7 @@ $_height-btn: 48px;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  z-index: 100;
   box-shadow: 0 2px 5px 0 var(--clr-neutral-4);
   border: 1px solid var(--clr-neutral-3);
   border-radius: $_border-radius;

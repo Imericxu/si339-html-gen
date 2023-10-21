@@ -1,5 +1,20 @@
 <nav id="nav">
   <div class="dropup">
+    <button class="dropup__btn">
+      <span>
+        {% if nav_page == "index" %}
+          <i class="fa-solid fa-paw dropup__btn__txt-icon"></i> Pets
+        {% elif nav_page == "travel" %}
+          <i class="fa-solid fa-plane dropup__btn__txt-icon"></i> Travel
+        {% elif nav_page == "recipes" %}
+          <i class="fa-solid fa-utensils dropup__btn__txt-icon"></i> Recipes
+        {% endif %}
+      </span>
+      <span class="dropup__btn__icon">
+        <i class="fa-solid fa-chevron-up"></i>
+      </span>
+    </button>
+
     <div class="dropup__list-container">
       <ul class="dropup__list">
         <li
@@ -49,22 +64,5 @@
         </li>
       </ul>
     </div>
-    <!--Empty onclick to allow "hover" state on mobile-->
-    <button
-      class="dropup__btn"
-    >
-      <span>
-        {% if nav_page == "index" %}
-          <i class="fa-solid fa-paw dropup__btn__txt-icon"></i> Pets
-        {% elif nav_page == "travel" %}
-          <i class="fa-solid fa-plane dropup__btn__txt-icon"></i> Travel
-        {% elif nav_page == "recipes" %}
-          <i class="fa-solid fa-utensils dropup__btn__txt-icon"></i> Recipes
-        {% endif %}
-      </span>
-      <span class="dropup__btn__icon">
-        <i class="fa-solid fa-chevron-up"></i>
-      </span>
-    </button>
   </div>
 </nav>
