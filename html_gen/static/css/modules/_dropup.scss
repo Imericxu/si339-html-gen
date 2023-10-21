@@ -106,7 +106,8 @@ $_height-btn: 48px;
 
 .dropup__list > li {
   &:hover,
-  &:active {
+  &:active,
+  &:focus-within {
     background-color: var(--clr-neutral-1);
   }
 }
