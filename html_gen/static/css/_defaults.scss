@@ -1,3 +1,5 @@
+/****** Default Styles ******/
+
 @use "vars";
 
 :root {
@@ -10,7 +12,7 @@
 }
 
 * {
-  font-family: $fontFamilyDefault;
+  font-family: vars.$font-family-default;
 
   :focus {
     // Restore default focus outline
@@ -25,7 +27,7 @@ html {
 }
 
 body {
-  padding: $paddingGlobal;
+  padding: vars.$padding-global;
 }
 
 /* Tags sorted alphabetically */
@@ -84,7 +86,7 @@ li {
 
 ol {
   margin: 1rem 0;
-  padding-inline-start: $paddingListL1;
+  padding-inline-start: vars.$padding-list-l1;
   list-style-type: decimal;
 }
 
@@ -98,7 +100,7 @@ u {
 
 ul {
   margin: 1rem 0;
-  padding-inline-start: $paddingListL1;
+  padding-inline-start: vars.$padding-list-l1;
   list-style-type: disc;
 }
 

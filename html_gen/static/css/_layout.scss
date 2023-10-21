@@ -1,0 +1,32 @@
+/****** Major layout styles ******/
+
+#skip-to-main {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+
+  &:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+  }
+}
+
+#nav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 100;
+  width: 100vw;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+}

@@ -13,8 +13,6 @@
     />
     <!--Normalize styles across browsers-->
     <link href="{{ url_prefix }}css/reset.css" rel="stylesheet" />
-    <!--Restore useful defaults-->
-    <link href="{{ url_prefix }}css/defaults.css" rel="stylesheet" />
     <!--Custom styles-->
     <link href="{{ url_prefix }}css/styles.css" rel="stylesheet" />
     <!--Font Awesome-->
@@ -28,7 +26,7 @@
   </head>
 
   <body>
-    <a class="hidden-focusable-banner" href="#main-content">Skip to Main Content</a>
+    <a id="skip-to-main" href="#main-content">Skip to Main Content</a>
 
     {% block pre_content %}{% endblock %}
 

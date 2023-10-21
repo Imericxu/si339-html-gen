@@ -1,42 +1,48 @@
-<nav class="nav">
-  <div class="nav--container">
-    <div class="nav--content">
-      <ul class="nav--list">
-        <li>
+<nav id="nav">
+  <div class="dropup">
+    <div class="dropup__list-container">
+      <ul class="dropup__list">
+        <li
+          {% if nav_page == "index" %}
+            class="dropup__list__item--selected"
+          {% endif %}
+        >
           <a
-            {% if nav_page == "index" %}
-              class="nav--link-current"
-              {% if nest_level == 0 %}
-                aria-current="page"
-              {% endif %}
-            {% endif %}
+            class="dropup__list__action"
             href="{{ url_prefix }}index.html"
+            {% if nav_page == "index" and nest_level == 0 %}
+              aria-current="page"
+            {% endif %}
           >
             <i class="fa-solid fa-paw fa-sm"></i> Pets
           </a>
         </li>
-        <li>
+        <li
+          {% if nav_page == "travel" %}
+            class="dropup__list__item--selected"
+          {% endif %}
+        >
           <a
-            {% if nav_page == "travel" %}
-              class="nav--link-current"
-              {% if nest_level == 0 %}
-                aria-current="page"
-              {% endif %}
-            {% endif %}
+            class="dropup__list__action"
             href="{{ url_prefix }}travel.html"
+            {% if nav_page == "travel" and nest_level == 0 %}
+              aria-current="page"
+            {% endif %}
           >
             <i class="fa-solid fa-plane fa-sm"></i> Travel
           </a>
         </li>
-        <li>
+        <li
+          {% if nav_page == "recipes" %}
+            class="dropup__list__item--selected"
+          {% endif %}
+        >
           <a
-            {% if nav_page == "recipes" %}
-              class="nav--link-current"
-              {% if nest_level == 0 %}
-                aria-current="page"
-              {% endif %}
-            {% endif %}
+            class="dropup__list__action"
             href="{{ url_prefix }}recipes.html"
+            {% if nav_page == "recipes" and nest_level == 0 %}
+              aria-current="page"
+            {% endif %}
           >
             <i class="fa-solid fa-utensils fa-sm"></i> Recipes
           </a>
@@ -45,18 +51,18 @@
     </div>
     <!--Empty onclick to allow "hover" state on mobile-->
     <button
-      class="nav--btn"
+      class="dropup__btn"
     >
-      <span class="nav--btn--text">
+      <span>
         {% if nav_page == "index" %}
-          <i class="fa-solid fa-paw"></i> Pets
+          <i class="fa-solid fa-paw dropup__btn__txt-icon"></i> Pets
         {% elif nav_page == "travel" %}
-          <i class="fa-solid fa-plane"></i> Travel
+          <i class="fa-solid fa-plane dropup__btn__txt-icon"></i> Travel
         {% elif nav_page == "recipes" %}
-          <i class="fa-solid fa-utensils"></i> Recipes
+          <i class="fa-solid fa-utensils dropup__btn__txt-icon"></i> Recipes
         {% endif %}
       </span>
-      <span class="nav--btn--icon">
+      <span class="dropup__btn__icon">
         <i class="fa-solid fa-chevron-up"></i>
       </span>
     </button>

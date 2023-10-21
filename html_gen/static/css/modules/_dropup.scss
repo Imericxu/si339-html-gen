@@ -1,0 +1,136 @@
+@use "sass:math";
+
+$_border-radius: 8px;
+$_padding-shadow: 4px;
+$_height-btn: 48px;
+
+.dropup {
+  display: grid;
+  position: relative;
+  align-items: end;
+  justify-items: center;
+  margin-bottom: 4px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.dropup__btn {
+  display: inline-flex;
+  position: relative;
+  grid-area: 1 / 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 5px 0 var(--clr-neutral-4);
+  border: 1px solid var(--clr-neutral-3);
+  border-radius: $_border-radius;
+  background: var(--clr-neutral-5);
+  padding-inline: 16px;
+  min-width: 160px;
+  height: $_height-btn;
+  pointer-events: all;
+  color: var(--clr-neutral-0);
+  font-weight: bold;
+  text-align: center;
+}
+
+.dropup__btn__txt-icon {
+  margin-right: 0.4rem;
+}
+
+.dropup__list-container {
+  position: relative;
+  grid-area: 1 / 1;
+  visibility: hidden;
+  margin-bottom: math.div($_height-btn, 2);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dropup__list {
+  position: absolute;
+  top: calc(100% - $_height-btn / 2);
+  left: $_padding-shadow;
+  transform: translateY(0);
+  margin: 0;
+  box-shadow: 0 0 3px 0 var(--clr-neutral-4);
+  border-radius: $_border-radius $_border-radius 0 0;
+  background: var(--clr-neutral-0);
+  padding: 0 0 $_height-btn;
+  width: calc(100% - #{$_padding-shadow * 2});
+  overflow: auto;
+  pointer-events: none;
+  color: var(--clr-neutral-5);
+  list-style: none;
+
+  > li {
+    white-space: nowrap;
+
+    + li {
+      margin: 0;
+    }
+  }
+}
+
+.dropup__list__action {
+  display: flex;
+  align-items: center;
+  padding: 8px 32px 8px 24px;
+  width: 100%;
+  min-height: 48px;
+
+  > i {
+    width: 1.5rem;
+  }
+}
+
+/***** State *****/
+
+.dropup--open {
+  .dropup__btn__icon {
+    transform: rotate(180deg);
+  }
+
+  .dropup__list-container {
+    visibility: visible;
+  }
+
+  .dropup__list {
+    transform: translateY(calc(-100% + $_height-btn));
+    pointer-events: all;
+  }
+}
+
+.dropup__list > li {
+  &:hover,
+  &:active {
+    background-color: var(--clr-neutral-1);
+  }
+}
+.dropup__list__item--selected {
+  font-weight: bold;
+}
+
+.dropup__list__action:focus {
+  outline: none;
+}
+
+/***** Media queries *****/
+
+@media (prefers-reduced-motion: no-preference) {
+  $animation-time: 0.3s;
+
+  .dropup__btn__icon,
+  .dropup__list {
+    transition: transform $animation-time ease-in-out;
+  }
+
+  .dropup__list-container {
+    transition: visibility $animation-time;
+  }
+
+  .dropup--open .dropup__list-container {
+    transition: none;
+  }
+}

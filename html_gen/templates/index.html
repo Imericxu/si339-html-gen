@@ -6,7 +6,7 @@
 {% block pre_content %}
   {% include "components/nav.html" %}
 
-  <header><h1>Pets</h1></header>
+  <header id="header"><h1>Pets</h1></header>
 {% endblock pre_content %}
 
 {% block content %}
@@ -15,7 +15,7 @@
       <a class="grid-item" href="{{ url_prefix }}{{ pet.slug | e }}.html">
         <figure class="grid--figure">
           <!-- Decorative blur effect -->
-          <img class="img-blurred" src="{{ url_prefix }}{{ pet.main_img.src }}" alt="" />
+          <img class="img-blur-decor" src="{{ url_prefix }}{{ pet.main_img.src }}" alt="" />
           <div class="grid--figure--img-container">
             <img src="{{ url_prefix }}{{ pet.main_img.src }}" alt="{{ pet.main_img.alt }}" />
           </div>

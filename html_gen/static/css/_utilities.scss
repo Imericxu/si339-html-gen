@@ -1,0 +1,17 @@
+/****** Utility classes ******/
+
+@use "vars";
+
+.full-width {
+  // Negative margin to counteract body padding
+  margin-left: -1 * vars.$padding-global;
+  width: 100vw;
+}
+
+.img-blur-decor {
+  // Zoom in to cover blurred edges
+  transform: scale(1.5);
+  filter: blur(16px) brightness(0.3);
+  object-fit: cover;
+  object-position: center;
+}

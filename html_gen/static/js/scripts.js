@@ -1,16 +1,17 @@
-// Add interactivity to the navButton
-const navButton = document.querySelector(".nav--btn");
-const navContainer = document.querySelector(".nav--container");
-navButton.addEventListener("click", () => {
-  navContainer.classList.toggle("open");
+// Add interactivity to the dropupBtn
+const dropup = document.querySelector("#nav .dropup");
+const dropupBtn = document.querySelector("#nav .dropup__btn");
+const classNameDropupOpen = "dropup--open";
+dropupBtn.addEventListener("click", () => {
+  dropup.classList.toggle(classNameDropupOpen);
 });
 // Open if hovering container or child elements
-navContainer.addEventListener("pointerover", (e) => {
+dropup.addEventListener("pointerover", (e) => {
   if (e.pointerType !== "mouse") return;
-  navContainer.classList.add("open");
+  dropup.classList.add(classNameDropupOpen);
 });
 // Close if hovering outside of container
-navContainer.addEventListener("pointerout", (e) => {
+dropup.addEventListener("pointerout", (e) => {
   if (e.pointerType !== "mouse") return;
-  navContainer.classList.remove("open");
+  dropup.classList.remove(classNameDropupOpen);
 });
