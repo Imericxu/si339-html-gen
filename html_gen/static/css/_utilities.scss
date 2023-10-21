@@ -11,7 +11,7 @@
 .img-blur-decor {
   /* Zoom in to cover blurred edges */
   transform: scale(1.5);
-  filter: blur(16px) brightness(0.3);
+  filter: blur(16px);
   width: 100%;
   height: 100%;
   object-fit: cover;
