@@ -1,7 +1,6 @@
 import json
 import subprocess
 from pathlib import Path
-from urllib.parse import quote
 
 import jinja2
 from jinja2 import Environment, PackageLoader, Template, select_autoescape
