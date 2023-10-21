@@ -15,7 +15,7 @@
   font-family: vars.$font-family-default;
 
   :focus {
-    // Restore default focus outline
+    /* Restore default focus outline */
     outline: revert;
   }
 }
@@ -104,13 +104,12 @@ ul {
   list-style-type: disc;
 }
 
-// Reduced motion media query
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  // Replace gifs with static placeholder image
+  /* Replace gifs with static placeholder image */
   img[src$=".gif"] {
     content: url("../images/reduced-motion.jpg");
   }

@@ -4,7 +4,6 @@
 @import "defaults", "utilities", "layout";
 @import "modules/dropup";
 
-// Don't allow expanding grid cells to affect grid layout
 .grid {
   display: grid;
   position: relative;
@@ -13,13 +12,11 @@
   margin-left: -1 * vars.$padding-global;
   width: 100vw;
 
-  // Screen >= 400px
   @media (min-width: 400px) {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 
-// Completely fit grid items to grid cells
 .grid-item {
   display: inline-block;
   position: relative;
@@ -87,7 +84,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  // Animate grid item hover
+  /* Animate grid item hover */
   .grid--figure {
     $animationTime: 0.3s;
 
