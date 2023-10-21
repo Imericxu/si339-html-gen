@@ -1,3 +1,4 @@
+/***** Dropup *****/
 @use "sass:math";
 
 $_border-radius: 8px;
@@ -108,6 +109,7 @@ $_height-btn: 48px;
     background-color: var(--clr-neutral-1);
   }
 }
+
 .dropup__list__item--selected {
   font-weight: bold;
 }
@@ -116,7 +118,7 @@ $_height-btn: 48px;
   outline: none;
 }
 
-/***** Media queries *****/
+/**** Media queries ****/
 
 @media (prefers-reduced-motion: no-preference) {
   $animation-time: 0.3s;

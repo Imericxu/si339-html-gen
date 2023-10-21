@@ -10,16 +10,16 @@
 {% endblock pre_content %}
 
 {% block content %}
-  <section class="grid">
+  <section class="home-grid">
     {% for location in locations %}
       <a
-        class="grid-item"
+        class="home-grid__item"
         href="{{ url_prefix }}{{ location.slug | e }}.html"
       >
-        <figure class="grid--figure">
+        <figure class="home-grid__figure">
           <!-- Decorative blur effect -->
           <img class="img-blur-decor" src="{{ url_prefix }}{{ location.main_img.src }}" alt="" />
-          <div class="grid--figure--img-container">
+          <div class="home-grid__img-container">
             <img src="{{ url_prefix }}{{ location.main_img.src }}" alt="{{ location.main_img.alt }}" />
           </div>
           <figcaption>{{ location.name }}</figcaption>

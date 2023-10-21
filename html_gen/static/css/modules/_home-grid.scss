@@ -1,0 +1,107 @@
+/***** Home Grid *****/
+@use "../vars";
+
+.home-grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  grid-auto-rows: 200px;
+  margin-left: -1 * vars.$padding-global;
+  width: 100vw;
+}
+
+.home-grid__item {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.home-grid__figure {
+  display: grid;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  .img-blur-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  > figcaption {
+    display: block;
+    grid-area: 1 / 1;
+    align-self: end;
+    z-index: 3;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.9)
+    );
+    padding: 16px 8px 8px 8px;
+    width: 100%;
+    color: var(--clr-neutral-1);
+  }
+}
+
+.home-grid__img-container {
+  display: flex;
+  grid-area: 1 / 1;
+  justify-content: center;
+  align-items: stretch;
+  z-index: 2;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+
+  > img {
+    min-width: 70%;
+    object-fit: cover;
+  }
+}
+
+/**** States ****/
+
+.home-grid__item {
+  &:hover,
+  &:focus {
+    outline: none;
+
+    .home-grid__img-container img {
+      filter: brightness(0.7);
+    }
+  }
+}
+
+/**** Media Queries ****/
+
+@media (min-width: 400px) {
+  .home-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Animate grid item hover */
+  .home-grid__figure {
+    $animationTime: 0.3s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      .home-grid__img-container > img {
+        transform: scale(1.1);
+      }
+    }
+
+    .home-grid__img-container > img {
+      transform: scale(1);
+      transition:
+        filter $animationTime ease-in-out,
+        transform $animationTime ease-in-out;
+    }
+  }
+}

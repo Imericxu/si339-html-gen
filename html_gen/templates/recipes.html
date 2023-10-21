@@ -10,16 +10,16 @@
 {% endblock pre_content %}
 
 {% block content %}
-<section class="grid">
+<section class="home-grid">
   {% for recipe in recipes %}
   <a
-    class="grid-item"
+    class="home-grid__item"
     href="{{ url_prefix }}{{ recipe.slug | e }}.html"
   >
-    <figure class="grid--figure">
+    <figure class="home-grid__figure">
       <!-- Decorative blur effect -->
       <img class="img-blur-decor" src="{{ url_prefix }}{{ recipe.main_img.src }}" alt="" />
-      <div class="grid--figure--img-container">
+      <div class="home-grid__img-container">
         <img src="{{ url_prefix }}{{ recipe.main_img.src }}" alt="{{ recipe.main_img.alt }}" />
       </div>
       <figcaption>{{ recipe.name }}</figcaption>
