@@ -11,3 +11,13 @@
   object-fit: cover;
   object-position: center;
 }
+
+%no-inner-margin {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

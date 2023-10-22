@@ -15,47 +15,55 @@
 {% endblock pre_content %}
 
 {% block content %}
-  <p><b>Origin:</b> {{ origin }}</p>
-  <p>
-    <b>Source:</b>
-    {% if source.type == "text" %}
-      {{ source.value }}
-    {% elif source.type == "link" %}
-      <a class="link" href="{{ url_prefix }}{{ source.value }}">{{ source.value }}</a>
-    {% endif %}
-  </p>
-  <p><b>Category:</b> {{ category }}</p>
+  <div class="article">
+    <p><b>Origin:</b> {{ origin }}</p>
+    <p>
+      <b>Source:</b>
+      {% if source.type == "text" %}
+        {{ source.value }}
+      {% elif source.type == "link" %}
+        <a class="link" href="{{ url_prefix }}{{ source.value }}">{{ source.value }}</a>
+      {% endif %}
+    </p>
+    <p><b>Category:</b> {{ category }}</p>
 
-  <p>{{ description }}</p>
+    <div class="long-text">
+      <p>{{ description }}</p>
+    </div>
 
-  <h2>Recipe Ingredients</h2>
+    <h2>Recipe Ingredients</h2>
 
-  <ul>
-    {% for item in ingredients recursive %}
-      <li>
-        {% if item is string %}
-          {{ item }}
-        {% else %}
-          {{ item.parent }}
-          <ul>{{ loop(item.children) }}</ul>
-        {% endif %}
-      </li>
+    <div class="long-text">
+      <ul>
+        {% for item in ingredients recursive %}
+          <li>
+            {% if item is string %}
+              {{ item }}
+            {% else %}
+              {{ item.parent }}
+              <ul>{{ loop(item.children) }}</ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <h2>Recipe Steps</h2>
+
+    <div class="long-text">
+      <ol>
+        {% for step in steps %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+
+    <h2>Additional Images</h2>
+
+    {% for image in photo_gallery %}
+      <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
     {% endfor %}
-  </ul>
 
-  <h2>Recipe Steps</h2>
-
-  <ol>
-    {% for step in steps %}
-      <li>{{ step }}</li>
-    {% endfor %}
-  </ol>
-
-  <h2>Additional Images</h2>
-
-  {% for image in photo_gallery %}
-    <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
-  {% endfor %}
-
-  <!--{{ author }}-->
+    <!--{{ author }}-->
+  </div>
 {% endblock content %}

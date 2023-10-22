@@ -15,21 +15,26 @@
 {% endblock pre_content %}
 
 {% block content %}
-  <img src="{{ url_prefix }}{{ main_gif.src }}" alt="" />
+  <div class="article">
+    <img src="{{ url_prefix }}{{ main_gif.src }}" alt=""/>
 
-  <p><b>Geographical Location:</b> {{ geographical_location }}</p>
-  {% for par in description %}
-    <p>{{ par }}</p>
-  {% endfor %}
+    <p><b>Geographical Location:</b> {{ geographical_location }}</p>
 
-  <h2>Photo Gallery</h2>
+    <div class="long-text">
+      {% for par in description %}
+        <p>{{ par }}</p>
+      {% endfor %}
+    </div>
 
-  {% for image in photo_gallery %}
-    <figure>
-      <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
-      <figcaption>{{ image.caption }}</figcaption>
-    </figure>
-  {% endfor %}
+    <h2>Photo Gallery</h2>
 
-  <!--{{ author }}-->
+    {% for image in photo_gallery %}
+      <figure>
+        <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}"/>
+        <figcaption>{{ image.caption }}</figcaption>
+      </figure>
+    {% endfor %}
+
+    <!--{{ author }}-->
+  </div>
 {% endblock content %}
