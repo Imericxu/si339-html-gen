@@ -1,13 +1,13 @@
 /***** Default Styles *****/
 
-@use "vars";
+@use "vars" as *;
 
 :root {
   --dim-padding-page: 8px;
 }
 
 * {
-  font-family: vars.$font-family-default;
+  font-family: $font-family-default;
 
   :focus {
     /* Restore default focus outline */
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-color: vars.$clr-surface;
+  background-color: $clr-surface;
 }
 
 /* Tags sorted alphabetically */
@@ -81,7 +81,7 @@ li {
 
 ol {
   margin: 1rem 0;
-  padding-inline-start: vars.$padding-list-l1;
+  padding-inline-start: $padding-list-l1;
   list-style-type: decimal;
 }
 
@@ -95,7 +95,7 @@ u {
 
 ul {
   margin: 1rem 0;
-  padding-inline-start: vars.$padding-list-l1;
+  padding-inline-start: $padding-list-l1;
   list-style-type: disc;
 }
 
