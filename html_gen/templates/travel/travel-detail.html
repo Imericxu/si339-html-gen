@@ -19,7 +19,7 @@
   <div class="article">
     <p><b>Geographical Location:</b> {{ geographical_location }}</p>
 
-    <img class="img" src="{{ url_prefix }}{{ main_gif.src }}" alt=""/>
+    <img class="img img--thin-h" src="{{ url_prefix }}{{ main_gif.src }}" alt="" />
 
     <div class="long-text">
       {% for par in description %}
@@ -30,9 +30,12 @@
     <h2>Photo Gallery</h2>
 
     {% for image in photo_gallery %}
-      <figure>
-        <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}"/>
-        <figcaption>{{ image.caption }}</figcaption>
+      <figure class="captioned-img">
+        <div class="captioned-img__img-container">
+          <img class="img-blur-decor captioned-img__bg" src="{{ url_prefix }}{{ image.src }}" alt="" />
+          <img class="captioned-img__img" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+        </div>
+        <figcaption class="captioned-img__caption">{{ image.caption }}</figcaption>
       </figure>
     {% endfor %}
 

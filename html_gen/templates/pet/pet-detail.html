@@ -36,7 +36,10 @@
     <h2>Photo Gallery</h2>
 
     {% for image in photo_gallery %}
-      <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+      <div class="constrained-img">
+        <img class="img-blur-decor constrained-img__bg" src="{{ url_prefix }}{{ image.src }}" alt="" />
+        <img class="constrained-img__img" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+      </div>
     {% endfor %}
 
     <!-- {{ author }} -->
