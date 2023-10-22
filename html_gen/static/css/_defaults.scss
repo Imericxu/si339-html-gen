@@ -4,13 +4,6 @@
 
 :root {
   --dim-padding-page: 8px;
-
-  --clr-neutral-0: hsl(0, 0%, 98%);
-  --clr-neutral-1: hsl(0, 0%, 90%);
-  --clr-neutral-2: hsl(220, 3%, 80%);
-  --clr-neutral-3: hsl(220, 3%, 60%);
-  --clr-neutral-4: hsl(220, 5%, 20%);
-  --clr-neutral-5: hsl(225, 7%, 4%);
 }
 
 * {
@@ -26,6 +19,10 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   line-height: 1.5;
+}
+
+body {
+  background-color: vars.$clr-surface;
 }
 
 /* Tags sorted alphabetically */

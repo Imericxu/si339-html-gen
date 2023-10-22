@@ -2,3 +2,24 @@
 
 $font-family-default: "Lato", "Verdana", "Avenir Next", sans-serif;
 $padding-list-l1: 24px;
+
+// TODO: Refactor this to use CSS variables
+///// Colors
+
+$clr-surface: hsl(218, 15%, 93%);
+$clr-on-surface: hsl(0, 0%, 8%);
+
+$clr-surface-inverse: hsl(0, 0%, 8%);
+$clr-on-surface-inverse: hsl(0, 0%, 98%);
+
+$clr-surface-container-high: hsl(220, 18%, 88%);
+
+$clr-primary: hsl(221, 51%, 28%);
+$clr-on-primary: hsl(0, 0%, 98%);
+
+$clr-secondary: hsl(37, 98%, 44%);
+$clr-on-secondary: hsl(0, 0%, 8%);
+
+$clr-white: hsl(0, 0%, 98%);
+$clr-black: hsl(0, 0%, 8%);
+$clr-shadow: hsl(0, 0%, 30%);

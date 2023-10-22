@@ -1,5 +1,7 @@
 /***** Dropup *****/
+@use "sass:color";
 @use "sass:math";
+@use "../vars" as *;
 
 $_border-radius: 8px;
 $_padding-shadow: 4px;
@@ -10,7 +12,6 @@ $_height-btn: 48px;
   position: relative;
   align-items: end;
   justify-items: center;
-  margin-bottom: 4px;
   overflow: visible;
   pointer-events: none;
 }
@@ -23,15 +24,14 @@ $_height-btn: 48px;
   align-items: center;
   gap: 16px;
   z-index: 100;
-  box-shadow: 0 2px 5px 0 var(--clr-neutral-4);
-  border: 1px solid var(--clr-neutral-3);
+  box-shadow: 0 2px 8px 0 $clr-shadow;
   border-radius: $_border-radius;
-  background: var(--clr-neutral-5);
+  background: $clr-primary;
   padding-inline: 16px;
   min-width: 160px;
   height: $_height-btn;
   pointer-events: all;
-  color: var(--clr-neutral-0);
+  color: $clr-on-primary;
   font-weight: bold;
   text-align: center;
 }
@@ -56,23 +56,35 @@ $_height-btn: 48px;
   left: $_padding-shadow;
   transform: translateY(0);
   margin: 0;
-  box-shadow: 0 0 3px 0 var(--clr-neutral-4);
+  box-shadow: 0 0 3px 0 $clr-shadow;
   border-radius: $_border-radius $_border-radius 0 0;
-  background: var(--clr-neutral-0);
-  padding: 0 0 $_height-btn;
+  background: $clr-surface-container-high;
+  padding: 8px 0 $_height-btn;
   width: calc(100% - #{$_padding-shadow * 2});
   overflow: auto;
   pointer-events: none;
-  color: var(--clr-neutral-5);
+  color: $clr-on-surface;
   list-style: none;
 
   > li {
+    position: relative;
     white-space: nowrap;
 
     + li {
       margin: 0;
     }
   }
+}
+
+/* Add a colored rectangle to the left of the selected item */
+.dropup__list__item--selected::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $clr-secondary;
+  width: 4px;
+  height: 100%;
+  content: "";
 }
 
 .dropup__list__action {
@@ -108,7 +120,7 @@ $_height-btn: 48px;
   &:hover,
   &:active,
   &:focus-within {
-    background-color: var(--clr-neutral-1);
+    background-color: color.adjust($clr-surface-container-high, $lightness: -8%);
   }
 }
 
