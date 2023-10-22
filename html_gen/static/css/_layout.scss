@@ -1,4 +1,5 @@
 /***** Major layout styles *****/
+@use "vars" as *;
 
 #skip-to-main {
   position: absolute;
@@ -35,8 +36,10 @@
 }
 
 #header {
+  background-color: $clr-surface-container;
   padding: var(--dim-padding-page);
   padding-bottom: 0;
+  overflow: hidden;
 
   &.l-full-pad {
     padding: var(--dim-padding-page);
