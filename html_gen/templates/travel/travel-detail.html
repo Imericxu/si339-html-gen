@@ -17,7 +17,7 @@
 {% block content %}
   <img src="{{ url_prefix }}{{ main_gif.src }}" alt="" />
 
-  <p>Geographical Location: {{ geographical_location }}</p>
+  <p><b>Geographical Location:</b> {{ geographical_location }}</p>
   {% for par in description %}
     <p>{{ par }}</p>
   {% endfor %}
