@@ -5,12 +5,16 @@
 {% block pre_content %}
   {% include "components/nav.html" %}
 
-  <header id="header"><h1>{{ name }}</h1></header>
+  <header class="hero l-full-pad" id="header">
+    <img class="img-blur-decor hero__bg" src="{{ url_prefix }}{{ main_img.src }}" alt="{{ main_img.alt }}" />
+    <img class="hero__img" src="{{ url_prefix }}{{ main_img.src }}" alt="{{ main_img.alt }}" />
+    <h1 class="hero__txt">{{ name }}</h1>
+    <!-- Invisible button to hide text -->
+    <button class="hero__btn" aria-label="Hide text"></button>
+  </header>
 {% endblock pre_content %}
 
 {% block content %}
-  <img src="{{ url_prefix }}{{ main_img.src }}" alt="{{ main_img.alt }}" />
-
   {% for par in description %}
     <p>{{ par }}</p>
   {% endfor %}

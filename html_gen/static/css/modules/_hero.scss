@@ -1,0 +1,57 @@
+@use "../vars" as *;
+
+.hero {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  min-height: 232px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+}
+
+.hero__img {
+  object-fit: contain;
+}
+
+.hero__txt {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba($clr-black, 0.9)
+  );
+  padding: 40px var(--dim-padding-page) var(--dim-padding-page);
+  width: 100%;
+  color: $clr-on-black;
+}
+
+.hero__txt--hidden {
+  opacity: 0;
+}
+
+.hero__btn {
+  position: absolute;
+  inset: 0;
+}
+
+/**** Media queries ****/
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__txt {
+    transition: opacity 0.2s ease-in-out;
+  }
+}

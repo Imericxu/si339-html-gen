@@ -37,6 +37,10 @@
 #header {
   padding: var(--dim-padding-page);
   padding-bottom: 0;
+
+  &.l-full-pad {
+    padding: var(--dim-padding-page);
+  }
 }
 
 /* Add padding to offset nav height */
