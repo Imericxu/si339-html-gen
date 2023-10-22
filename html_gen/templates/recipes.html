@@ -10,22 +10,24 @@
 {% endblock pre_content %}
 
 {% block content %}
-<section class="home-grid">
-  {% for recipe in recipes %}
-  <a
-    class="home-grid__item"
-    href="{{ url_prefix }}{{ recipe.slug | e }}.html"
-  >
-    <figure class="home-grid__figure">
-      <!-- Decorative blur effect -->
-      <img class="img-blur-decor" src="{{ url_prefix }}{{ recipe.main_img.src }}" alt="" />
-      <div class="home-grid__img-container">
-        <img src="{{ url_prefix }}{{ recipe.main_img.src }}" alt="{{ recipe.main_img.alt }}" />
-      </div>
-      <figcaption>{{ recipe.name }}</figcaption>
-    </figure>
-    <!-- {{ recipe.author }} -->
-  </a>
-  {% endfor %}
-</section>
+  <div class="surface-container-wrapper">
+    <section class="home-grid">
+      {% for recipe in recipes %}
+      <a
+        class="home-grid__item"
+        href="{{ url_prefix }}{{ recipe.slug | e }}.html"
+      >
+        <figure class="home-grid__figure">
+          <!-- Decorative blur effect -->
+          <img class="img-blur-decor" src="{{ url_prefix }}{{ recipe.main_img.src }}" alt="" />
+          <div class="home-grid__img-container">
+            <img src="{{ url_prefix }}{{ recipe.main_img.src }}" alt="{{ recipe.main_img.alt }}" />
+          </div>
+          <figcaption>{{ recipe.name }}</figcaption>
+        </figure>
+        <!-- {{ recipe.author }} -->
+      </a>
+      {% endfor %}
+    </section>
+  </div>
 {% endblock content %}
