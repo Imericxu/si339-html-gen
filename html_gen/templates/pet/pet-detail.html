@@ -23,19 +23,21 @@
       {% endfor %}
     </div>
 
+    <h2>Likes</h2>
+
+    <div class="long-text">
+      <ul>
+        {% for thing in liked_things %}
+          <li>{{ thing }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
     <h2>Photo Gallery</h2>
 
     {% for image in photo_gallery %}
       <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
     {% endfor %}
-
-    <h3>Likes</h3>
-
-    <ul>
-      {% for thing in liked_things %}
-        <li>{{ thing }}</li>
-      {% endfor %}
-    </ul>
 
     <!--{{ author }}-->
   </div>
