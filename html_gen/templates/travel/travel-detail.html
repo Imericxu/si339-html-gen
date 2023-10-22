@@ -17,9 +17,9 @@
 
 {% block content %}
   <div class="article">
-    <img src="{{ url_prefix }}{{ main_gif.src }}" alt=""/>
-
     <p><b>Geographical Location:</b> {{ geographical_location }}</p>
+
+    <img class="img" src="{{ url_prefix }}{{ main_gif.src }}" alt=""/>
 
     <div class="long-text">
       {% for par in description %}
