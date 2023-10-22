@@ -5,3 +5,8 @@
 @import "modules/dropup";
 @import "modules/home-grid";
 @import "modules/hero";
+
+.link {
+  color: vars.$clr-primary;
+  text-decoration: underline;
+}

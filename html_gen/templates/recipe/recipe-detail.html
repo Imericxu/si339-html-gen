@@ -21,7 +21,7 @@
     {% if source.type == "text" %}
       {{ source.value }}
     {% elif source.type == "link" %}
-      <a href="{{ url_prefix }}{{ source.value }}">{{ source.value }}</a>
+      <a class="link" href="{{ url_prefix }}{{ source.value }}">{{ source.value }}</a>
     {% endif %}
   </p>
   <p><b>Category:</b> {{ category }}</p>
