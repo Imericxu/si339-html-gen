@@ -77,6 +77,15 @@ function checkLongTextInteractivity() {
           $(longText).toggleClass("long-text--expanded");
           $(longText).outerHeight(496);
           longTextBtn.attr("aria-label", "Expand");
+          // Wait for animation to finish
+          setTimeout(() => {
+            if (
+              $(longText).offset().top + $(longText).outerHeight() <
+              $(window).scrollTop()
+            ) {
+              $(longText)[0].scrollIntoView();
+            }
+          }, 600);
         } else {
           $(longText).toggleClass("long-text--expanded");
           // Exact height of auto
