@@ -23,7 +23,7 @@
 
   <p>{{ description }}</p>
 
-  <h3>Recipe Ingredients</h3>
+  <h2>Recipe Ingredients</h2>
 
   <ul>
     {% for item in ingredients recursive %}
@@ -38,7 +38,7 @@
     {% endfor %}
   </ul>
 
-  <h3>Recipe Steps</h3>
+  <h2>Recipe Steps</h2>
 
   <ol>
     {% for step in steps %}
@@ -46,7 +46,7 @@
     {% endfor %}
   </ol>
 
-  <h3>Additional Images</h3>
+  <h2>Additional Images</h2>
 
   {% for image in photo_gallery %}
     <img src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
