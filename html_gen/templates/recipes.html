@@ -11,7 +11,7 @@
 
 {% block content %}
   <div class="surface-container-wrapper">
-    <section class="home-grid">
+    <div class="home-grid">
       {% for recipe in recipes %}
       <a
         class="home-grid__item"
@@ -28,6 +28,6 @@
         <!-- {{ recipe.author }} -->
       </a>
       {% endfor %}
-    </section>
+    </div>
   </div>
 {% endblock content %}
