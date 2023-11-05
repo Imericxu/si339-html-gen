@@ -1,0 +1,28 @@
+/**** Constrained Image ****/
+@use "../vars" as *;
+
+.constrained-img {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: stretch;
+  margin-block: 16px;
+  border-radius: 16px;
+  background-color: $clr-surface-container;
+  width: 100%;
+  max-height: 408px;
+  overflow: hidden;
+}
+
+.constrained-img__bg {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+}
+
+.constrained-img__img {
+  z-index: 1;
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

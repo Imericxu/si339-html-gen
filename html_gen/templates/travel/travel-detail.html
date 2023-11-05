@@ -3,15 +3,24 @@
 {% set nav_page = "travel" %}
 
 {% block title %}{{ name }}{% endblock title %}
+{% block body_class %}p-details{% endblock body_class %}
 {% block pre_content %}
-  {% include "components/nav.html" %}
+  <header id="header">
+    <nav id="nav">
+      <div class="back-btn">
+        <a class="back-btn__action" href="{{ url_prefix }}travel.html" aria-label="Back to Travel">
+          <i class="fa-solid fa-arrow-left fa-xl"></i>
+        </a>
+      </div>
+    </nav>
 
-  <header class="hero l-full-pad" id="header" title="{{ name }}">
-    <img class="img-blur-decor hero__bg" src="{{ url_prefix }}{{ main_img.src }}" alt="" />
-    <img class="hero__img" src="{{ url_prefix }}{{ main_img.src }}" alt="{{ main_img.alt }}" />
-    <h1 class="hero__txt">{{ name }}</h1>
-    <!-- Invisible button to hide text -->
-    <button class="hero__btn" aria-label="Hide text"></button>
+    <div class="hero" title="{{ name }}">
+      <img class="img-blur-decor hero__bg" src="{{ url_prefix }}{{ main_img.src }}" alt="" />
+      <img class="hero__img" src="{{ url_prefix }}{{ main_img.src }}" alt="{{ main_img.alt }}" />
+      <h1 class="hero__txt">{{ name }}</h1>
+      <!-- Invisible button to hide text -->
+      <button class="hero__btn" aria-label="Hide text"></button>
+    </div>
   </header>
 {% endblock pre_content %}
 
@@ -29,15 +38,17 @@
 
     <h2>Photo Gallery</h2>
 
-    {% for image in photo_gallery %}
-      <figure class="captioned-img">
-        <div class="captioned-img__img-container">
-          <img class="img-blur-decor captioned-img__bg" src="{{ url_prefix }}{{ image.src }}" alt="" />
-          <img class="captioned-img__img" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
-        </div>
-        <figcaption class="captioned-img__caption">{{ image.caption }}</figcaption>
-      </figure>
-    {% endfor %}
+    <div class="photo-grid photo-grid--auto-rows">
+      {% for image in photo_gallery %}
+        <figure class="captioned-img photo-grid__img">
+          <div class="captioned-img__img-container">
+            <img class="img-blur-decor captioned-img__bg" src="{{ url_prefix }}{{ image.src }}" alt="" />
+            <img class="captioned-img__img" src="{{ url_prefix }}{{ image.src }}" alt="{{ image.alt }}" />
+          </div>
+          <figcaption class="captioned-img__caption">{{ image.caption }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
 
     <!-- {{ author }} -->
   </div>

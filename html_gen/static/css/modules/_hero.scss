@@ -5,6 +5,7 @@
   position: relative;
   justify-content: center;
   align-items: stretch;
+  padding: var(--dim-padding-page);
   width: 100%;
   min-height: 232px;
   max-height: 400px;
@@ -36,8 +37,7 @@
     transparent,
     rgba($clr-black, 0.9)
   );
-  padding: 40px calc(2 * var(--dim-padding-page))
-    calc(2 * var(--dim-padding-page));
+  padding: 40px var(--dim-padding-page-wide) var(--dim-padding-page-wide);
   width: 100%;
   color: $clr-on-black;
 }

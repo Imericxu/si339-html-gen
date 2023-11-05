@@ -1,0 +1,70 @@
+/**** Nav ****/
+@use "../vars" as *;
+
+.nav {
+  display: none;
+  position: relative;
+  gap: 16px;
+  font-size: 1.2rem;
+}
+
+.nav__action {
+  position: relative;
+  padding: 2px 8px;
+  color: $clr-on-surface-light;
+
+  // Add underline
+  &::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    z-index: 0;
+    background-color: $clr-primary;
+    width: 98%;
+    height: 100%;
+    content: "";
+  }
+
+  &[aria-current="page"] {
+    // Add underline
+    &::before {
+      transform: scaleY(0.1);
+      background-color: $clr-secondary;
+    }
+  }
+
+  &:hover {
+    color: $clr-on-primary;
+
+    &::before {
+      transform: scaleY(1);
+      background-color: $clr-primary;
+    }
+  }
+}
+
+.nav__action__txt {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  $_animation-time: 0.2s;
+
+  .nav__action {
+    transition: color $_animation-time ease-in-out;
+  }
+
+  .nav__action::before {
+    transition: transform $_animation-time ease-in-out;
+  }
+}
+
+@media (min-width: $media-tablet) {
+  .nav {
+    display: flex;
+  }
+}

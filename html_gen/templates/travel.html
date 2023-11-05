@@ -3,10 +3,12 @@
 {% set nav_page = "travel" %}
 
 {% block title %}Travel{% endblock title %}
+{% block body_class %}p-home{% endblock body_class %}
 {% block pre_content %}
-  {% include "components/nav.html" %}
-
-  <header id="header"><h1>Travel</h1></header>
+  <header id="header">
+    <h1 class="title--with-icon"><i class="fa-solid fa-plane fa-sm"></i> Travel</h1>
+    {% include "components/nav.html" %}
+  </header>
 {% endblock pre_content %}
 
 {% block content %}

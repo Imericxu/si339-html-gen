@@ -3,10 +3,12 @@
 {% set nav_page = "recipes" %}
 
 {% block title %}Recipes{% endblock title %}
+{% block body_class %}p-home{% endblock body_class %}
 {% block pre_content %}
-{% include "components/nav.html" %}
-
-<header id="header"><h1>Recipes</h1></header>
+  <header id="header">
+    <h1 class="title--with-icon"><i class="fa-solid fa-utensils fa-sm"></i> Recipes</h1>
+    {% include "components/nav.html" %}
+  </header>
 {% endblock pre_content %}
 
 {% block content %}

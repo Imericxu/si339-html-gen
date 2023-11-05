@@ -150,3 +150,9 @@ $_height-btn: 48px;
     transition: none;
   }
 }
+
+@media (min-width: $media-tablet) {
+  .dropup {
+    display: none;
+  }
+}

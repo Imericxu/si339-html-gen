@@ -1,0 +1,41 @@
+/**** Captioned Image ****/
+@use "../vars" as *;
+
+.captioned-img {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: stretch;
+  margin: 0.8rem 0;
+  border-radius: 16px;
+  background: $clr-surface-container;
+  overflow: hidden;
+}
+
+.captioned-img__img-container {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 96px;
+  max-height: 408px;
+  overflow: hidden;
+}
+
+.captioned-img__bg {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+}
+
+.captioned-img__img {
+  z-index: 1;
+  object-fit: contain;
+}
+
+.captioned-img__caption {
+  background-color: $clr-surface-container;
+  padding: 16px;
+  width: 100%;
+}

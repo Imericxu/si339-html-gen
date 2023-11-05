@@ -1,0 +1,72 @@
+/**** Long Text ****/
+@use "sass:color";
+@use "../vars" as *;
+@use "../utilities" as *;
+
+.long-text {
+  position: relative;
+  margin: 0.8rem 0;
+  border-radius: 16px;
+  background: $clr-surface-container;
+  padding: 16px;
+
+  @extend %no-inner-margin;
+}
+
+.long-text--expandable {
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    inset: auto 0 0;
+    background: linear-gradient(transparent, $clr-surface-container);
+    height: 64px;
+    content: "";
+  }
+
+  &.long-text--expanded {
+    &::after {
+      height: 0;
+    }
+  }
+}
+
+.long-text__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 32px;
+  background-color: $clr-primary;
+  width: 4px;
+  height: calc(100% - 24px);
+
+  &:hover,
+  &:active {
+    background-color: color.adjust($clr-primary, $lightness: 15%);
+  }
+}
+
+.long-text__content {
+  margin-left: 16px;
+
+  @extend %no-inner-margin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  $animation-duration: 0.5s;
+
+  .long-text__btn {
+    transition-duration: $animation-duration;
+    transition-property: transform, height, top;
+    transition-timing-function: ease-in-out;
+  }
+
+  .long-text {
+    transition: height $animation-duration ease-in-out;
+
+    &::after {
+      transition: height $animation-duration ease-in-out;
+    }
+  }
+}

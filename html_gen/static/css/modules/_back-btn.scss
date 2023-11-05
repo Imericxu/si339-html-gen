@@ -1,0 +1,44 @@
+/**** Back Button ****/
+@use "../vars" as *;
+
+.back-btn {
+  display: inline-block;
+  opacity: 0.8;
+  // Black overlay linear gradient to bottom right (seamless)
+  background-image: linear-gradient(
+    to bottom right,
+    rgba($clr-black, 0.95),
+    transparent 50%
+  );
+  background-clip: padding-box;
+  width: 100%;
+  max-width: 300px;
+  color: $clr-on-black;
+}
+
+.back-btn--hovered {
+  opacity: 1;
+}
+
+.back-btn--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-btn__action {
+  display: inline-block;
+  opacity: 0.9;
+  background: none;
+  padding: var(--dim-padding-page) 24px 24px var(--dim-padding-page);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .back-btn,
+  .back-btn__action {
+    transition: opacity 0.3s ease-in-out;
+  }
+}

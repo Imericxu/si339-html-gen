@@ -1,0 +1,24 @@
+/**** Photo Grid ****/
+@use "../vars" as *;
+
+.photo-grid {
+  display: grid;
+  position: relative;
+  // Single column
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 16px;
+  grid-auto-flow: dense;
+}
+
+.photo-grid__img {
+  position: relative;
+  margin: 0;
+}
+
+@media (min-width: $media-tablet) {
+  .photo-grid {
+    // As many columns as possible with min width of 272px
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+  }
+}

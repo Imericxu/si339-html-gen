@@ -36,10 +36,10 @@
     bottom: 0;
     z-index: 3;
     background-image: linear-gradient(
-      to bottom,
-      transparent,
-      rgba($clr-black, 0.6),
-      rgba($clr-black, 0.9)
+                    to bottom,
+                    transparent,
+                    rgba($clr-black, 0.6),
+                    rgba($clr-black, 0.9)
     );
     padding: 16px 8px 8px 8px;
     width: 100%;
@@ -77,23 +77,30 @@
 
 /**** Media Queries ****/
 
-@media (min-width: 320px) {
+@media (min-width: $media-mobile-sm) {
   .home-grid {
     grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
     gap: 1px;
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: $media-mobile-md) {
   .home-grid {
-    margin: 8px;
-    width: calc(100% - 16px);
+    margin: var(--dim-padding-page);
+    width: calc(100% - var(--dim-padding-page) * 2);
   }
 }
 
-@media (min-width: 425px) {
+@media (min-width: $media-mobile-lg) {
   .home-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: $media-tablet) {
+  .home-grid {
+    margin: var(--dim-padding-page-wide);
+    width: calc(100% - var(--dim-padding-page-wide) * 2);
   }
 }
 
@@ -112,9 +119,8 @@
 
     .home-grid__img-container > img {
       transform: scale(1);
-      transition:
-        filter $animationTime ease-in-out,
-        transform $animationTime ease-in-out;
+      transition: filter $animationTime ease-in-out,
+      transform $animationTime ease-in-out;
     }
   }
 }

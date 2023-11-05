@@ -21,8 +21,16 @@ $(document).ready(() => {
   const heroBtn = $("#header .hero__btn");
   const heroTxt = $("#header .hero__txt");
   const classNameIsVisible = "hero__txt--hidden";
+  let backBtnHideTimeout;
   heroBtn.click(() => {
+    // Stop timeout if it's running
+    clearTimeout(backBtnHideTimeout);
     heroTxt.toggleClass(classNameIsVisible);
+    $(".back-btn").toggleClass("back-btn--hidden");
+    // Make back button visible again after 5 seconds
+    backBtnHideTimeout = setTimeout(() => {
+      $(".back-btn").removeClass("back-btn--hidden");
+    }, 5000);
   });
   heroBtn.on("pointerover", (e) => {
     if (e.pointerType !== "mouse") return;
@@ -38,6 +46,18 @@ $(document).ready(() => {
     clearTimeout(longTextTimeout);
     longTextTimeout = setTimeout(checkLongTextInteractivity, 100);
   });
+
+  // Hover effect for back button
+  const classNameBackBtnHover = "back-btn--hovered";
+  // Add class to the closest parent with class .back-btn
+  $(".back-btn__action").hover(
+    (e) => {
+      $(e.target).closest(".back-btn").addClass(classNameBackBtnHover);
+    },
+    (e) => {
+      $(e.target).closest(".back-btn").removeClass(classNameBackBtnHover);
+    },
+  );
 });
 
 function checkLongTextInteractivity() {

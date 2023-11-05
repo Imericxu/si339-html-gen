@@ -3,9 +3,15 @@
 @use "vars" as *;
 
 @import "defaults", "utilities", "layout";
+@import "modules/back-btn";
+@import "modules/captioned-img";
+@import "modules/constrained-img";
 @import "modules/dropup";
 @import "modules/home-grid";
 @import "modules/hero";
+@import "modules/long-text";
+@import "modules/photo-grid";
+@import "modules/nav";
 
 /* Smaller modules can be include directly */
 
@@ -25,6 +31,12 @@
   padding: var(--dim-padding-page);
 }
 
+@media (min-width: $media-tablet) {
+  .article {
+    padding-inline: var(--dim-padding-page-wide);
+  }
+}
+
 .img {
   border-radius: 16px;
   width: 100%;
@@ -36,137 +48,9 @@
   object-position: center;
 }
 
-.constrained-img {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: stretch;
-  margin-block: 16px;
-  border-radius: 16px;
-  background-color: $clr-surface-container;
-  width: 100%;
-  max-height: 408px;
-  overflow: hidden;
-}
-
-.constrained-img__bg {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-}
-
-.constrained-img__img {
-  z-index: 1;
-  width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-/**** Long Text ****/
-
-.long-text {
-  position: relative;
-  margin: 0.8rem 0;
-  border-radius: 16px;
-  background: $clr-surface-container;
-  padding: 16px;
-
-  @extend %no-inner-margin;
-}
-
-.long-text--expandable {
-  overflow: hidden;
-
-  &::after {
-    position: absolute;
-    inset: auto 0 0;
-    background: linear-gradient(transparent, $clr-surface-container);
-    height: 64px;
-    content: "";
+.title--with-icon {
+  i {
+    margin-right: 0.4rem;
+    color: $clr-primary;
   }
-
-  &.long-text--expanded {
-    &::after {
-      height: 0;
-    }
-  }
-}
-
-.long-text__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  border-radius: 32px;
-  background-color: $clr-primary;
-  width: 4px;
-  height: calc(100% - 24px);
-
-  &:hover,
-  &:active {
-    background-color: color.adjust($clr-primary, $lightness: 15%);
-  }
-}
-
-.long-text__content {
-  margin-left: 16px;
-
-  @extend %no-inner-margin;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  $animation-duration: 0.5s;
-
-  .long-text__btn {
-    transition-duration: $animation-duration;
-    transition-property: transform, height, top;
-    transition-timing-function: ease-in-out;
-  }
-
-  .long-text {
-    transition: height $animation-duration ease-in-out;
-
-    &::after {
-      transition: height $animation-duration ease-in-out;
-    }
-  }
-}
-
-/**** Captioned Image ****/
-
-.captioned-img {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  margin: 0.8rem 0;
-  border-radius: 16px;
-  background: $clr-surface-container;
-  overflow: hidden;
-}
-
-.captioned-img__img-container {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: stretch;
-  min-height: 96px;
-  max-height: 408px;
-  overflow: hidden;
-}
-
-.captioned-img__bg {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-}
-
-.captioned-img__img {
-  z-index: 1;
-  object-fit: contain;
-}
-
-.captioned-img__caption {
-  background-color: $clr-surface-container;
-  padding: 16px;
-  width: 100%;
 }

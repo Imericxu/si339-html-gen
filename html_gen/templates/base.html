@@ -31,7 +31,7 @@
     <title>{% block title required %}{% endblock %}</title>
   </head>
 
-  <body>
+  <body class="{% block body_class required %}{% endblock %}">
     <a id="skip-to-main" href="#main-content">Skip to Main Content</a>
 
     {% block pre_content %}{% endblock %}

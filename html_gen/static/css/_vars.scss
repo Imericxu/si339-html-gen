@@ -3,22 +3,32 @@
 $font-family-default: "Lato", "Verdana", "Avenir Next", sans-serif;
 $padding-list-l1: 24px;
 
+///// Media queries
+$media-mobile-sm: 320px;
+$media-mobile-md: 375px;
+$media-mobile-lg: 425px;
+$media-tablet: 768px;
+$media-desktop: 1024px;
+
 // TODO: Refactor this to use CSS variables
 ///// Colors
 
 $clr-surface: hsl(218, 15%, 93%);
 $clr-on-surface: hsl(0, 0%, 8%);
+$clr-on-surface-light: hsl(0, 0%, 20%);
 
 $clr-surface-container: hsl(219, 30%, 89%);
 $clr-surface-container-high: hsl(220, 34%, 87%);
 
-$clr-primary: hsl(221, 51%, 30%);
+$clr-primary: hsl(221, 51%, 38%);
 $clr-on-primary: hsl(0, 0%, 98%);
 
 $clr-secondary: hsl(37, 98%, 44%);
+$clr-secondary-dark: hsl(38, 100%, 35%);
 $clr-on-secondary: hsl(0, 0%, 8%);
 
 $clr-white: hsl(0, 0%, 98%);
+$clr-on-white: hsl(0, 0%, 8%);
 $clr-black: hsl(0, 0%, 8%);
 $clr-on-black: hsl(0, 0%, 98%);
 $clr-shadow: hsl(0, 0%, 30%);

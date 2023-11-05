@@ -1,4 +1,5 @@
 /***** Major layout styles *****/
+@use "sass:color";
 @use "vars" as *;
 
 #skip-to-main {
@@ -21,34 +22,67 @@
   }
 }
 
-#nav {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  justify-content: center;
-  align-items: flex-end;
-  z-index: 100;
-  margin-bottom: 4px;
-  width: 100%;
-  height: 0;
-  overflow: visible;
-  pointer-events: none;
-}
-
-#header {
-  background-color: $clr-surface-container;
-  padding: var(--dim-padding-page);
-  padding-bottom: 0;
-  overflow: hidden;
-
-  &.l-full-pad {
+.p-home {
+  #header {
+    background-color: $clr-surface-container;
     padding: var(--dim-padding-page);
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  #nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 100;
+    margin-bottom: 4px;
+    width: 100%;
+    height: 0;
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  #main-content {
+    /* Add padding to offset nav height */
+    padding-bottom: 64px;
+    width: 100%;
+    height: 100%;
+  }
+
+  // Tablet and up
+  @media (min-width: $media-tablet) {
+    #header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: var(--dim-padding-page-wide);
+
+      > * {
+        display: inline-block;
+      }
+    }
+
+    #nav {
+      display: inline-block;
+      position: relative;
+      z-index: auto;
+      margin-bottom: 0;
+      inset: auto;
+      width: auto;
+      height: auto;
+      pointer-events: auto;
+    }
   }
 }
 
-#main-content {
-  /* Add padding to offset nav height */
-  padding-bottom: 64px;
-  width: 100%;
-  height: 100%;
+.p-details {
+  #nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+  }
 }
