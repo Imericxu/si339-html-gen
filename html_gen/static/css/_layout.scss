@@ -23,6 +23,13 @@
 }
 
 .p-home {
+  background-image: url("https://png.pngtree.com/png-clipart/20230131/ourmid/pngtree-clouds-clouds-clouds-bottom-frame-png-image_6203042.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: $clr-surface-container;
+  background-blend-mode: luminosity;
+  padding-bottom: 64px;
+
   #header {
     background-color: $clr-surface-container;
     padding: var(--dim-padding-page);
@@ -45,14 +52,13 @@
   }
 
   #main-content {
-    /* Add padding to offset nav height */
-    padding-bottom: 64px;
     width: 100%;
-    height: 100%;
   }
 
   // Tablet and up
   @media (min-width: $media-tablet) {
+    padding-bottom: 0;
+
     #header {
       display: flex;
       justify-content: space-between;

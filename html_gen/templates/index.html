@@ -12,21 +12,19 @@
 {% endblock pre_content %}
 
 {% block content %}
-  <div class="surface-container-wrapper">
-    <div class="home-grid">
-      {% for pet in pets %}
-        <a class="home-grid__item" href="{{ url_prefix }}{{ pet.slug | e }}.html">
-          <figure class="home-grid__figure">
-            <!-- Decorative blur effect -->
-            <img class="img-blur-decor" src="{{ url_prefix }}{{ pet.main_img.src }}" alt=""/>
-            <div class="home-grid__img-container">
-              <img src="{{ url_prefix }}{{ pet.main_img.src }}" alt="{{ pet.main_img.alt }}"/>
-            </div>
-            <figcaption>{{ pet.name }}</figcaption>
-          </figure>
-          <!-- {{ pet.author }} -->
-        </a>
-      {% endfor %}
-    </div>
+  <div class="home-grid">
+    {% for pet in pets %}
+      <a class="home-grid__item" href="{{ url_prefix }}{{ pet.slug | e }}.html">
+        <figure class="home-grid__figure">
+          <!-- Decorative blur effect -->
+          <img class="img-blur-decor" src="{{ url_prefix }}{{ pet.main_img.src }}" alt=""/>
+          <div class="home-grid__img-container">
+            <img src="{{ url_prefix }}{{ pet.main_img.src }}" alt="{{ pet.main_img.alt }}"/>
+          </div>
+          <figcaption>{{ pet.name }}</figcaption>
+        </figure>
+        <!-- {{ pet.author }} -->
+      </a>
+    {% endfor %}
   </div>
 {% endblock content %}
